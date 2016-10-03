@@ -21,6 +21,7 @@ Courses
 - [CM5 : Programmation graphique](CM/CM5.pdf)
 - [CM6 : Les Tableaux](CM/CM6.pdf)
 - [CM7 : Les chaînes de caractères](CM/CM7.pdf)
+- [CM8 : Les Structures](CM/CM8.pdf)
 
 ### TD
 
