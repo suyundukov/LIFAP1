@@ -1,4 +1,5 @@
 /* Retourner vrai, si la chaîne de caractères est polindrome, faux sinon */
+#include <cstring>
 #include <iostream>
 
 using namespace std;
