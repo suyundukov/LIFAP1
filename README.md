@@ -127,8 +127,6 @@ int combin(int n, int p); // Combination Function
 
 ## FIXME
 
-- TD7 : [7.cpp](TD/TD7/Code/7.cpp) `Pass array as function argument`
-- TD7 : [P1.cpp](TD/TD7/Code/P1.cpp) `Pass array as function argument`
 - TP1 : [5J-1.cpp](TP/TP1/Code/5J-1.cpp) `Rewrite the code`
 - TP1 : [5J-2.cpp](TP/TP1/Code/5J-2.cpp) `Rewrite the code`
 - TP3 : [3G.cpp](TP/TP3/Code/3G.cpp) `Code`

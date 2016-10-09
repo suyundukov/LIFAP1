@@ -3,24 +3,16 @@
 
 using namespace std;
 
+const int MAX = 100;
+
 /* Procédure */
 
-void tableMultip(int n) //FIXME: Passage de tableau dans les parametres
+void tableMultip(int tab[MAX][MAX], int n)
 {
-  int tab[n][n];
-  
   for (int i = 0; i < n; ++i) {
     for (int j = 0; j < i + 1; ++j) {
       tab[i][j] = i * j;
     }
-  }
-  
-  // Afichage de ce tableau
-  for (int i = 0; i < n; ++i) {
-    for (int j = 0; j < i + 1; ++j) {
-      cout << tab[i][j] << " ";
-    }
-    cout << endl;
   }
 }
 
@@ -28,7 +20,17 @@ void tableMultip(int n) //FIXME: Passage de tableau dans les parametres
 
 int main()
 {
-  tableMultip(5);
+  int tab[MAX][MAX];
+  
+  tableMultip(tab, 5);
+  
+  // Afichage de ce tableau
+  for (int i = 0; i < 5; ++i) {
+    for (int j = 0; j < i + 1; ++j) {
+      cout << tab[i][j] << " ";
+    }
+    cout << endl;
+  }
   
   return 0;
 }
