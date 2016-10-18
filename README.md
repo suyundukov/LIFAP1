@@ -59,8 +59,8 @@ Courses
   - [Source Code](TD/TD8/Code)
 - [TD9 : Les structures](TD/TD9/)
   - [Sujet](TD/TD9/TD9.pdf)
-  - Corrigé[](TD/TD9/TD9-cor.pdf)
-  - Source Code[](TD/TD9/Code)
+  - [Corrigé](TD/TD9/TD9-cor.pdf)
+  - [Source Code](TD/TD9/Code) :x:
 - [TD10 : Chaines de caractères (suite)](TD/TD10/)
   - [Sujet](TD/TD10/TD10.pdf)
   - [Corrigé](TD/TD10/TD10-cor.pdf)
@@ -127,6 +127,7 @@ int combin(int n, int p); // Combination Function
 
 ## FIXME
 
+- TD9 : [P1.cpp](TD/TD7/Code/P1.cpp) `Code`
 - TP1 : [5J-1.cpp](TP/TP1/Code/5J-1.cpp) `Rewrite the code`
 - TP1 : [5J-2.cpp](TP/TP1/Code/5J-2.cpp) `Rewrite the code`
 
