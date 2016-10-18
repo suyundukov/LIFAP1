@@ -52,7 +52,7 @@ Courses
 - [TD7 : Tableaux à deux dimensions](TD/TD7/)
   - [Sujet](TD/TD7/TD7.pdf)
   - [Corrigé](TD/TD7/TD7-cor.pdf)
-  - [Source Code](TD/TD7/Code) :x:
+  - [Source Code](TD/TD7/Code)
 - [TD8 : Chaines de caractères](TD/TD8/)
   - [Sujet](TD/TD8/TD8.pdf)
   - [Corrigé](TD/TD8/TD8-cor.pdf)
@@ -87,7 +87,7 @@ Courses
 - [TP3 : Passage de paramètres / GRAPIC](TP/TP3)
   - [Sujet](TP/TP3/TP3.pdf)
   - [Corrigé](TP/TP3/TP3-cor.pdf)
-  - [Source Code](TP/TP3/Code) :x:
+  - [Source Code](TP/TP3/Code)
 - [TP4 : Tableaux 1D / 2D](TP/TP4)
   - [Sujet](TP/TP4/TP4.pdf)
   - [Corrigé](TP/TP4/TP4-cor.pdf)
@@ -129,9 +129,6 @@ int combin(int n, int p); // Combination Function
 
 - TP1 : [5J-1.cpp](TP/TP1/Code/5J-1.cpp) `Rewrite the code`
 - TP1 : [5J-2.cpp](TP/TP1/Code/5J-2.cpp) `Rewrite the code`
-- TP3 : [3G.cpp](TP/TP3/Code/3G.cpp) `Code`
-- TP3 : [3H.cpp](TP/TP3/Code/3H.cpp) `Code`
-- TP3 : [3I.cpp](TP/TP3/Code/3I.cpp) `Code`
 
 [1]: https://i1.sumaxi.me/i/lifap1.png
 [2]: http://liris.cnrs.fr/alexandre.meyer/grapic/html/index.html
