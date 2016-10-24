@@ -3,25 +3,20 @@
 
 using namespace std;
 
-int main() //FIXME: Réecrire le code
+int main()
 {
-  for (int i = 0; i < 4; ++i) {
-    for (int j = 0; j < 3 - i; ++j) {
-      cout << " ";
-    }
-    for (int k = 0; k < 2 * i + 1; ++k) {
-      cout << "*";
-    }
-    cout << endl;
-  }
+  int j;
   
-  for (int i = 0; i < 3; ++i) {
-    for (int j = 0; j < i + 1; ++j) {
-      cout << " ";
+  for (int i = 0; i < 7; ++i) {
+    if (i < 4) {
+      for (j = 0; j < 3 - i; ++j)
+        cout << " ";
+    } else {
+      for (j = 0; j < i - 3; ++j)
+        cout << " ";
     }
-    for (int k = 0; k < 5 - i * 2; ++k) {
+    for (int k = 0; k < 7 - j * 2; ++k)
       cout << "*";
-    }
     cout << endl;
   }
   

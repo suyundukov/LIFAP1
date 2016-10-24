@@ -79,7 +79,7 @@ Courses
 - [TP1 : Prise en main de l’environnement / programmes simples](TP/TP1)
   - [Sujet](TP/TP1/TP1.pdf)
   - [Corrigé](TP/TP1/TP1-cor.pdf)
-  - [Source Code](TP/TP1/Code) :x:
+  - [Source Code](TP/TP1/Code)
 - [TP2 : Fonctions et procédures](TP/TP2)
   - [Sujet](TP/TP2/TP2.pdf)
   - [Corrigé](TP/TP2/TP2-cor.pdf)
@@ -128,8 +128,6 @@ int combin(int n, int p); // Combination Function
 ## FIXME
 
 - TD9 : [P1.cpp](TD/TD7/Code/P1.cpp) `Code`
-- TP1 : [5J-1.cpp](TP/TP1/Code/5J-1.cpp) `Rewrite the code`
-- TP1 : [5J-2.cpp](TP/TP1/Code/5J-2.cpp) `Rewrite the code`
 
 [1]: https://i1.sumaxi.me/i/lifap1.png
 [2]: http://liris.cnrs.fr/alexandre.meyer/grapic/html/index.html
