@@ -72,7 +72,7 @@ Courses
 - [TD12 : Révisions](TD/TD12/)
   - [Sujet](TD/TD12/TD12.pdf)
   - Corrigé[](TD/TD12/TD12-cor.pdf)
-  - Source Code[](TD/TD12/Code)
+  - [Source Code](TD/TD12/Code)
 
 ### TP
 
@@ -128,6 +128,7 @@ int combin(int n, int p); // Combination Function
 ## FIXME
 
 - TD9 : [P1.cpp](TD/TD7/Code/P1.cpp) `Code`
+- TD12 : [123456.cpp](TD/TD12/Code/123456.cpp) `Rewrite the code`
 
 [1]: https://i1.sumaxi.me/i/lifap1.png
 [2]: http://liris.cnrs.fr/alexandre.meyer/grapic/html/index.html
