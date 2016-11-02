@@ -72,7 +72,7 @@ Courses
 - [TD12 : Révisions](TD/TD12/)
   - [Sujet](TD/TD12/TD12.pdf)
   - Corrigé[](TD/TD12/TD12-cor.pdf)
-  - [Source Code](TD/TD12/Code)
+  - [Source Code](TD/TD12/Code) :x:
 
 ### TP
 
@@ -100,16 +100,16 @@ Courses
   - [Sujet](TP/TP6/TP6.pdf)
   - [Corrigé](TP/TP6/TP6-cor.pdf)
   - [Source Code](TP/TP6/Code)
-- TP7 : Les structures avec GrAPiC[](TP/TP7)
-  - Sujet[](TP/TP7/TP7.pdf)
+- [TP7 : Les structures avec GrAPiC](TP/TP7)
+  - [Sujet](TP/TP7/TP7.pdf)
   - Corrigé[](TP/TP7/TP7-cor.pdf)
   - Source Code[](TP/TP7/Code)
-- TP8 : Memory GrAPic[](TP/TP8)
-  - Sujet[](TP/TP8/TP8.pdf)
+- [TP8 : Memory GrAPic](TP/TP8)
+  - [Sujet](TP/TP8/TP8.pdf)
   - Corrigé[](TP/TP8/TP8-cor.pdf)
   - Source Code[](TP/TP8/Code)
-- TP9 : Démineur[](TP/TP9)
-  - Sujet[](TP/TP9/TP9.pdf)
+- [TP9 : Démineur](TP/TP9)
+  - [Sujet](TP/TP9/TP9.pdf)
   - Corrigé[](TP/TP9/TP9-cor.pdf)
   - Source Code[](TP/TP9/Code)
 
