@@ -1,5 +1,5 @@
 /* Procédure -> Extraire le niveau du gris maximum, minimum et moyen */
-#include "myimage.h"
+#include "myimage.hpp"
 #include <iostream>
 
 /* Procédure */

@@ -1,5 +1,5 @@
 /* Remplir un tableau avec les coefficients du triangle de Pascal */
-#include "sunlib.h" // Contient la fonction combin()
+#include "sunlib.hpp" // Contient la fonction combin()
 #include <iostream>
 
 const int MAX = 100;

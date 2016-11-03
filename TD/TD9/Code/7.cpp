@@ -1,5 +1,5 @@
 /* Effectuer la symétrie verticale d'une image */
-#include "myimage.h"
+#include "myimage.hpp"
 #include <iostream>
 
 /* Fonction */

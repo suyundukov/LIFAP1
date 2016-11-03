@@ -1,4 +1,4 @@
-#pragma once
+#include "sunlib.hpp"
 
 /* Fonction de factorielle */
 

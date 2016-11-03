@@ -1,6 +1,6 @@
 /* Effectuer le seuillage d'une image */
 #include <iostream>
-#include "myimage.h"
+#include "myimage.hpp"
 
 /* Procédure */
 

@@ -122,7 +122,7 @@ Courses
 ## Links
 
 - [GrAPiC][2]
-- [sunlib.h][3]
+- [sunlib.hpp][3]
 
   > Defines some useful functions
 
@@ -138,4 +138,4 @@ int combin(int n, int p); // Combination Function
 
 [1]: https://i1.sumaxi.me/i/lifap1.png
 [2]: http://liris.cnrs.fr/alexandre.meyer/grapic/html/index.html
-[3]: https://git.io/vPqyy
+[3]: https://git.io/vXZXX

@@ -1,5 +1,5 @@
 /* Afficher le triangle de Pascal */
-#include "sunlib.h"
+#include "sunlib.hpp"
 #include <iostream>
 
 using namespace std;

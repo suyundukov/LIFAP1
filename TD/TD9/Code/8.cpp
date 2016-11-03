@@ -1,5 +1,5 @@
 /* Retourner une nouvelle image, calculée comme la somme de deux images */
-#include "myimage.h"
+#include "myimage.hpp"
 #include <iostream>
 
 /* Procédure */
