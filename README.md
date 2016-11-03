@@ -29,18 +29,22 @@ Courses
   - [Sujet](TD/TD1/TD1.pdf)
   - [Corrigé](TD/TD1/TD1-cor.pdf)
   - [Source Code](TD/TD1/Code)
+    - [Python](TD/TD1/Code/Python) :snake:
 - [TD2 : Algorithmes plus évolués](TD/TD2/)
   - [Sujet](TD/TD2/TD.pdf)
   - [Corrigé](TD/TD2/TD-cor.pdf)
   - [Source Code](TD/TD2/Code)
+    - [Python](TD/TD2/Code/Python) :snake:
 - [TD3 : Fonctions et procédures](TD/TD3/)
   - [Sujet](TD/TD3/TD3.pdf)
   - [Corrigé](TD/TD3/TD3-cor.pdf)
   - [Source Code](TD/TD3/Code)
+    - [Python](TD/TD3/Code/Python) :snake:
 - [TD4 : Passage de paramètres](TD/TD4/)
   - [Sujet](TD/TD4/TD4.pdf)
   - [Corrigé](TD/TD4/TD4-cor.pdf)
   - [Source Code](TD/TD4/Code)
+    - [Python](TD/TD4/Code/Python) :snake:
 - [TD5 : GrAPiC](TD/TD5/)
   - [Sujet](TD/TD5/TD5.pdf)
   - [Corrigé](TD/TD5/TD5-cor.pdf)
@@ -49,10 +53,12 @@ Courses
   - [Sujet](TD/TD6/TD6.pdf)
   - [Corrigé](TD/TD6/TD6-cor.pdf)
   - [Source Code](TD/TD6/Code)
+    - [Python](TD/TD6/Code/Python) :snake:
 - [TD7 : Tableaux à deux dimensions](TD/TD7/)
   - [Sujet](TD/TD7/TD7.pdf)
   - [Corrigé](TD/TD7/TD7-cor.pdf)
   - [Source Code](TD/TD7/Code)
+    - [Python](TD/TD7/Code/Python) :snake:
 - [TD8 : Chaines de caractères](TD/TD8/)
   - [Sujet](TD/TD8/TD8.pdf)
   - [Corrigé](TD/TD8/TD8-cor.pdf)
