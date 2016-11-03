@@ -2,8 +2,6 @@
 #include <cmath>
 #include <iostream>
 
-using namespace std;
-
 int main() 
 {
   int a;
@@ -11,8 +9,8 @@ int main()
 
   b = true;
 
-  cout << "Donnes un entier : ";
-  cin >> a;
+  std::cout << "Donnes un entier : " << std::flush;
+  std::cin >> a;
 
   for (int i = 2; i < sqrt(a); ++i) {
     if (a % i == 0) {
@@ -21,9 +19,9 @@ int main()
   }
 
   if (b) {
-    cout << a << " est un nombre premier.\n";
+    std::cout << a << " est un nombre premier." << std::endl;
   } else {
-    cout << a << " n'est pas un nombre premier.\n";
+    std::cout << a << " n'est pas un nombre premier." << std::endl;
   }
 
   return 0;

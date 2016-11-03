@@ -1,40 +1,38 @@
 /* Simuler le fonctionnement d'une calculatrice simple */
 #include <iostream>
 
-using namespace std;
-
 int main()
 {
   int a;
   int b;
   char c;
 
-  cout << "Donne moi première valeur : ";
-  cin >> a;
-  cout << "Choisi un operateur parmi : ' + ', ' - ', ' * ' et ' / ' : ";
-  cin >> c;
-  cout << "Donne moi deuxième valeur : ";
-  cin >> b;
+  std::cout << "Donne moi première valeur : " << std::flush;
+  std::cin >> a;
+  std::cout << "Choisi un operateur parmi : + , - , * et / : " << std::flush;
+  std::cin >> c;
+  std::cout << "Donne moi deuxième valeur : " << std::flush;
+  std::cin >> b;
 
   switch (c) {
   case '+':
-    cout << a << " + " << b << " = " << a + b << endl;
+    std::cout << a << " + " << b << " = " << a + b << std::endl;
     break;
   case '-':
-    cout << a << " - " << b << " = " << a - b << endl;
+    std::cout << a << " - " << b << " = " << a - b << std::endl;
     break;
   case '*':
-    cout << a << " * " << b << " = " << a * b << endl;
+    std::cout << a << " * " << b << " = " << a * b << std::endl;
     break;
   case '/':
     if (b == 0) {
-      cout << "Operation impossible !\n";
+      std::cout << "Operation impossible !" << std::endl;
     } else {
-      cout << a << " / " << b << " = " << a / b << endl;
+      std::cout << a << " / " << b << " = " << a / b << std::endl;
     }
     break;
   default:
-    cout << "Unknown error !\n";
+    std::cout << "Unknown error !" << std::endl;;
     break;
   }
 

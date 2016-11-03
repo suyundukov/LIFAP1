@@ -1,8 +1,6 @@
 /* Remplir troisième tableau, qui contient la moyenne de deux premiers */
 #include <iostream>
 
-using namespace std;
-
 /* Procèdure */
 
 void calcMoyTab(float tab[], float tab1[], float tab2[], int n)
@@ -16,16 +14,16 @@ void calcMoyTab(float tab[], float tab1[], float tab2[], int n)
 
 int main()
 {
-  float tab[5] = {12, 8, 3, 4, 5};
-  float tab1[5] = {15, 3, 4, 5, 6};
-  float tab2[5] = {};
+  float tab[6] = {12, 8, 5.5, 14, 13, 10.5};
+  float tab1[6] = {15, 3, 12, 17, 8, 10};
+  float tab2[6] = {};
   
-  calcMoyTab(tab, tab1, tab2, 5);
+  calcMoyTab(tab, tab1, tab2, 6);
   
-  for (int i = 0; i < 5; ++i) {
-    cout << tab2[i] << " ";
+  for (int i = 0; i < 6; ++i) {
+    std::cout << tab2[i] << " " << std::flush;
   }
   
-  cout << endl;
+  std::cout << std::endl;
   return 0;
 }

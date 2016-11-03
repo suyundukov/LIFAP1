@@ -1,8 +1,6 @@
 /* Calculer le nombre de combinaison de P éléments pour un ensemble de N */
 #include <iostream>
 
-using namespace std;
-
 /* Fontion de factorielle */
 
 int fact(int n)
@@ -32,13 +30,12 @@ int main()
   int n;
   int p;
   
-  cout << "Donne moi une valeur : ";
-  cin >> n;
-  cout << "Donne moi une autre valeur : ";
-  cin >> p;
+  std::cout << "Donne moi une valeur : " << std::flush;
+  std::cin >> n;
+  std::cout << "Donne moi une autre valeur : " << std::flush;
+  std::cin >> p;
   
-  cout << combin(n, p);
+  std::cout << combin(n, p) << std::endl;
   
-  cout << endl;
   return 0;
 }

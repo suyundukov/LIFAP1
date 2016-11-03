@@ -1,8 +1,6 @@
 /* Calculer et retourner les N premiers termes de la suite */
 #include <iostream>
 
-using namespace std;
-
 /* Procédure */
 
 void suite(float tab[], int n)
@@ -23,8 +21,9 @@ int main()
   suite(tab, 6);
   
   for (int i = 0; i < 6; ++i) {
-    cout << tab[i] << " ";
+    std::cout << tab[i] << " " << std::flush;
   }
   
+  std::cout << std::endl;
   return 0;
 }

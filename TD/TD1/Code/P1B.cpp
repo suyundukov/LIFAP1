@@ -1,17 +1,15 @@
 /* Afficher les nombres pairs entre 0 et 20 en utilisant une boucle TANT QUE */
 #include <iostream>
 
-using namespace std;
-
 int main()
 {
   int i = 0;
 
   while (i <= 20) {
-    cout << i << " ";
+    std::cout << i << " " << std::flush;
     i += 2;
   }
 
-  cout << endl;
+  std::cout << std::endl;
   return 0;
 }

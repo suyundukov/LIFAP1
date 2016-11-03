@@ -1,12 +1,10 @@
 /* Afficher les dix nombres suivants la valeur N donnée en paramètre */
 #include <iostream>
 
-using namespace std;
-
 void affiche(int a)
 {
   for (int i = 0; i < 10; ++i) {
-    cout << a << " ";
+    std::cout << a << " " << std::flush;
     ++a;
   }
 }
@@ -15,12 +13,12 @@ int main()
 {
   int a;
   
-  cout << "Donne moi une valeur : ";
-  cin >> a;
+  std::cout << "Donne moi une valeur : " << std::flush;
+  std::cin >> a;
   
   affiche(a);
   
-  cout << endl;
+  std::cout << std::endl;
   
   return 0;
 }

@@ -3,8 +3,6 @@
 /* 3. Fonction -> Calculer la somme de deux diagonales */
 #include <iostream>
 
-using namespace std;
-
 /* Fonction 1 */
 
 float sommeLigne(float tab[5][5], int n)
@@ -67,17 +65,17 @@ int main()
   n = 3;
   
   // Somme des éléments de ligne
-  cout << "La somme des éléments de cette ligne est "
-  << sommeLigne(tab, n) << endl;
+  std::cout << "La somme des éléments de cette ligne est "
+    << sommeLigne(tab, n) << std::endl;
   
   // Somme des éléments de colonne
-  cout << "La somme des éléments de cette colonne est "
-  << sommeColonne(tab, n) << endl;
+  std::cout << "La somme des éléments de cette colonne est "
+    << sommeColonne(tab, n) << std::endl;
   
   //Somme des éléments des diagonales
-  cout << "La somme des éléments de la première diagonale est "
-  << sommeDiagonale(tab, n, som1) << " et de la deuxième diagonale est "
-  << som1 << endl;
+  std::cout << "La somme des éléments de la première diagonale est "
+    << sommeDiagonale(tab, n, som1) << " et de la deuxième diagonale est "
+    << som1 << std::endl;
   
   return 0;
 }

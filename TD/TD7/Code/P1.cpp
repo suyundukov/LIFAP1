@@ -1,8 +1,6 @@
 /* Remplir le tableau avec le résultat du produit de la ligne par colonne */
 #include <iostream>
 
-using namespace std;
-
 const int MAX = 100;
 
 /* Procédure */
@@ -27,9 +25,9 @@ int main()
   // Afichage de ce tableau
   for (int i = 0; i < 5; ++i) {
     for (int j = 0; j < i + 1; ++j) {
-      cout << tab[i][j] << " ";
+      std::cout << tab[i][j] << " " << std::flush;
     }
-    cout << endl;
+    std::cout << std::endl;
   }
   
   return 0;

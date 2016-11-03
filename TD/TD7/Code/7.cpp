@@ -2,8 +2,6 @@
 #include "sunlib.h" // Contient la fonction combin()
 #include <iostream>
 
-using namespace std;
-
 const int MAX = 100;
 
 /* Procédure */
@@ -28,9 +26,9 @@ int main()
   // Affichage de ce tableau
   for (int i = 0; i < 6; ++i) {
     for (int j = 0; j < i + 1; ++j) {
-      cout << tab[i][j] << "\t";
+      std::cout << tab[i][j] << "\t" << std::flush;
     }
-    cout << endl;
+    std::cout << std::endl;
   }
   
   return 0;

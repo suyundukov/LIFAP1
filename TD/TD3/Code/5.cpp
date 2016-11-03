@@ -1,8 +1,6 @@
 /* Calculer la somme des N premiers entiers */
 #include <iostream>
 
-using namespace std;
-
 int calcSomme(int a)
 {
   int b;
@@ -26,11 +24,11 @@ int main()
 {
   int a;
   
-  cout << "Donne moi une valeur : ";
-  cin >> a;
+  std::cout << "Donne moi une valeur : " << std::flush;
+  std::cin >> a;
   
-  cout << "La somme de " << a << " premiers entiers est : " << calcSomme(a);
+  std::cout << "La somme de " << a << " premiers entiers est : " << calcSomme(a);
   
-  cout << endl;
+  std::cout << std::endl;
   return 0;
 }

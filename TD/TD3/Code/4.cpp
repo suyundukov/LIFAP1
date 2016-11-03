@@ -1,15 +1,13 @@
-/* Demander à USER et retourner une valeur entre 0 et 20 */
+/* emander à USER une valeur entre 0 et 20, la retourner après */
 #include <iostream>
-
-using namespace std;
 
 int retour()
 {
   int a;
   
   do {
-    cout << "Donne moi une valeur entre 0 et 20 : ";
-    cin >> a;
+    std::cout << "Donne moi une valeur entre 0 et 20 : " << std::flush;
+    std::cin >> a;
   } while ((a < 1) || (a > 20));
   
   return a;
@@ -21,7 +19,7 @@ int main()
   
   a = retour();
   
-  cout << endl;
+  std::cout << std::endl;
   
   return 0;
 }

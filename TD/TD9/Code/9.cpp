@@ -3,8 +3,6 @@
  * 3. Procédure -> Supprimer une image de notre structure */
 #include <iostream>
 
-using namespace std;
-
 const int MAX_SIZE = 256;
 const int NB_IMAGE = 16;
 

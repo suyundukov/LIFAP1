@@ -1,31 +1,29 @@
 /* Dessiner le motif donné */
 #include <iostream>
 
-using namespace std;
-
-void dessin()
+void dessin(int lngr, int rep)
 {
-  int a;
-  int b;
-  
-  cout << "Donne moi la longueur du motif : ";
-  cin >> a;
-  cout << "Donne moi le nombre de répétition : ";
-  cin >> b;
-  
-  for (int l = 0; l < b; ++l) {
-    for (int i = 1; i <= a; ++i) {
-      for (int j = 0; j < i; ++j) {
-        cout << "*";
+  for (int i = 0; i < rep; ++i) {
+    for (int j = 1; j <= lngr; ++j) {
+      for (int k = 0; k < j; ++k) {
+        std::cout << "*" << std::flush;
       }
-      cout << endl;
+      std::cout << std::endl;
     }
   }
 }
 
 int main()
 {
-  dessin();
-  
+  int lngr;
+  int rep;
+
+  std::cout << "Donne moi la longueur du motif : " << std::flush;
+  std::cin >> lngr;
+  std::cout << "Donne moi le nombre de répétition : " << std::flush;
+  std::cin >> rep;
+
+  dessin(lngr, rep);
+
   return 0;
 }

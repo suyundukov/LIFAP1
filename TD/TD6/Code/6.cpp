@@ -3,8 +3,6 @@
 #include <cstring>
 #include <iostream>
 
-using namespace std;
-
 /* Procédure */
 
 void renverse(char tab[])
@@ -26,8 +24,7 @@ int main()
   
   renverse(tab);
   
-  cout << tab;
+  std::cout << tab << std::endl;
   
-  cout << endl;
   return 0;
 }

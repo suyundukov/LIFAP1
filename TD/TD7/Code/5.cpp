@@ -1,8 +1,6 @@
 /* Retourner la plus grand valeur de tableau, et ses indice */
 #include <iostream>
 
-using namespace std;
-
 /* Procédure */
 
 void recherchePlusGrand(float tab[5][5], float &max, int &row, int &col)
@@ -35,8 +33,9 @@ int main()
   
   recherchePlusGrand(tab, max, row, col);
   
-  cout << "La valeur la plus grand est " << max << endl;
-  cout << "Elle se trouve dans tab["<< row << "][" << col << "]\n";
+  std::cout << "La valeur la plus grand est " << max << std::endl;
+  std::cout << "Elle se trouve dans tab["<< row << "][" << col << "]" 
+    << std::endl;
   
   return 0;
 }

@@ -1,8 +1,6 @@
 /* Calculer la somme des valeurs du tableau */
 #include <iostream>
 
-using namespace std;
-
 /* Procédure */
 
 float sommeTableau(float tab[], int n)
@@ -23,7 +21,7 @@ int main()
 {
   float tab[9] = {12, 18.5, 13.2, 8.75, 16, 15, 13.5, 12, 17};
   
-  cout << sommeTableau(tab, 9) << endl;
+  std::cout << sommeTableau(tab, 9) << std::endl;
   
   return 0;
 }

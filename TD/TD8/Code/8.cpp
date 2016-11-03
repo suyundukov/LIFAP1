@@ -1,8 +1,6 @@
 /* Retourner le nombre de majuscule, de minuscule et de voyelles */
 #include <iostream>
 
-using namespace std;
-
 /* Procédure */
 
 void compter(char c[], int &maj, int &min, int &voy)
@@ -39,8 +37,7 @@ int main()
   
   compter(c, maj, min, voy);
   
-  cout << maj << " " << min << " " << voy;
+  std::cout << maj << " " << min << " " << voy << std::endl;
   
-  cout << endl;
   return 0;
 }

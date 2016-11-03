@@ -1,8 +1,6 @@
 /* Remplacer les valeurs de chaque case par la somme des valeurs precedents */
 #include <iostream>
 
-using namespace std;
-
 /* Procédure */
 
 void cumul(float tab[], int size)
@@ -16,14 +14,14 @@ void cumul(float tab[], int size)
 
 int main()
 {
-  float tab[9] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+  float tab[9] = {12, 8, 5.5, 14, 13, 10.5, 7, 16, 9};
   
   cumul(tab, 9);
   
   for (int i = 0; i < 9; ++i) {
-    cout << tab[i] << " ";
+    std::cout << tab[i] << " " << std::flush;
   }
   
-  cout << endl;
+  std::cout << std::endl;
   return 0;
 }

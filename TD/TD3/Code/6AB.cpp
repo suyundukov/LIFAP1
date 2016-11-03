@@ -1,9 +1,10 @@
-/* Afficher la liste des nombres parfait compris entre 1 et 10 000 */
+/* Fonction -> Retourner VRAI si N est parfait, faux sinon *
+ * Afficher la liste des nombres parfait compris entre 1 et 10 000 */
 #include <iostream>
 
-using namespace std;
+/* Fonction */
 
-bool parf(int a)
+bool estParfait(int a)
 {
   int somme;
   
@@ -22,11 +23,13 @@ bool parf(int a)
   }
 }
 
+/* Utilisation / Programme principal */
+
 int main()
-{  
+{
   for (int i = 1; i < 10000; ++i) {
-    if (parf(i)) {
-      cout << i << "\n";
+    if (estParfait(i)) {
+      std::cout << i << std::endl;
     }
   }
   

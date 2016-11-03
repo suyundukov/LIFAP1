@@ -5,8 +5,6 @@
 #include <ctime>
 #include <iostream>
 
-using namespace std;
-
 // Définission des constantes
 const short SIZE = 10;
 const short MINES = 9;
@@ -51,7 +49,7 @@ void compterMines(CaseGrille tab[SIZE][SIZE])
   for (int i = 0; i < SIZE; ++i) {
     for (int j = 0; j < SIZE; ++j) {
       if (tab[i][j].contenu != -1) {
-        for (int k = (i - 1 < 0) ? 0 : i - 1; k <= i + 1 && k != SIZE ; ++k) {
+        for (int k = (i - 1 < 0) ? 0 : i - 1; k <= i + 1 && k != SIZE; ++k) {
           for (int m = (j - 1 < 0) ? 0 : j - 1; m <= j + 1 && m != SIZE; ++m) {
             if (tab[k][m].contenu == -1)
               tab[i][j].contenu += 1;
@@ -66,47 +64,47 @@ void compterMines(CaseGrille tab[SIZE][SIZE])
 void afficherGrille(CaseGrille tab[SIZE][SIZE])
 {
   // Affichage de ligne avec les chiffre
-  cout << " " << flush; // Pour un petit décallage
+  std::cout << " " << std::flush; // Pour un petit décallage
   for (int i = 0; i < SIZE; ++i) {
-    cout << " " << i << flush;
+    std::cout << " " << i << std::flush;
   }
-  cout << endl;
+  std::cout << std::endl;
   // Affichage de reste de la grille
   for (int i = 0; i < SIZE; ++i) {
-    cout << i << flush;
+    std::cout << i << std::flush;
     for (int j = 0; j < SIZE; ++j) {
       if (tab[i][j].estDecouverte == true) {
         if (tab[i][j].contenu == -1) {
-          cout << " X" << flush;
+          std::cout << " X" << std::flush;
         } else {
-          cout << " " << tab[i][j].contenu << flush;
+          std::cout << " " << tab[i][j].contenu << std::flush;
         }
       } else {
-        cout << " -" << flush;
+        std::cout << " -" << std::flush;
       }
     }
-    cout << endl;
+    std::cout << std::endl;
   }
 }
 
 // Affichage de grille entière
 void afficherGrilleEntiere(CaseGrille tab[SIZE][SIZE])
 {
-  cout << " " << flush;
+  std::cout << " " << std::flush;
   for (int i = 0; i < SIZE; ++i) {
-    cout << " " << i << flush;
+    std::cout << " " << i << std::flush;
   }
-  cout << endl;
+  std::cout << std::endl;
   for (int i = 0; i < SIZE; ++i) {
-    cout << i << flush;
+    std::cout << i << std::flush;
     for (int j = 0; j < SIZE; ++j) {
       if (tab[i][j].contenu == -1) {
-        cout << " X" << flush;
+        std::cout << " X" << std::flush;
       } else {
-      cout << " " << tab[i][j].contenu << flush;
+      std::cout << " " << tab[i][j].contenu << std::flush;
       }
     }
-    cout << endl;
+    std::cout << std::endl;
   }
 }
 
@@ -116,11 +114,11 @@ int decouvrirUneCase(CaseGrille tab[SIZE][SIZE], int &x, int &y)
   int val;
   
   do {
-    cout << "Donne-moi les coordonnees de la case :" << endl;
-    cout << "X : " << flush;
-    cin >> x;
-    cout << "Y : " << flush;
-    cin >> y;
+    std::cout << "Donne-moi les coordonnees de la case :" << std::endl;
+    std::cout << "X : " << std::flush;
+    std::cin >> x;
+    std::cout << "Y : " << std::flush;
+    std::cin >> y;
   } while (tab[x][y].estDecouverte);
   
   if (tab[x][y].contenu == -1)
@@ -150,9 +148,9 @@ int joueur(CaseGrille tab[SIZE][SIZE], int casesRest)
       tab[x][y].estDecouverte = true;
       casesRest -= 1;
     } else {
-      cout << "Case déjà trouvé" << endl;
+      std::cout << "Case déjà trouvé" << std::endl;
     }
-    cout << "\nNombre de case à trouver : " << casesRest << endl;
+    std::cout << "\nNombre de case à trouver : " << casesRest << std::endl;
     afficherGrille(tab);
   }
   // S'il y a plus de case à trouvé
@@ -173,7 +171,7 @@ int main()
 
   nmbrCase = (SIZE * SIZE) - MINES;
   
-  cout << "Le nombre de case à trouver : " << nmbrCase << endl;
+  std::cout << "Le nombre de case à trouver : " << nmbrCase << std::endl;
   
   initGrille(tab);
   afficherGrille(tab);
@@ -183,9 +181,9 @@ int main()
   finPartie = joueur(tab, nmbrCase);
   
   if (finPartie == 0) {
-    cout << "\nGagné" << endl;
+    std::cout << "\nGagné" << std::endl;
   } else {
-    cout << "\nPerdu !!!\n" << endl;
+    std::cout << "\nPerdu !!!\n" << std::endl;
     afficherGrilleEntiere(tab);
   }
 

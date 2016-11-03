@@ -8,8 +8,6 @@
 /*============================================================================*/
 #include <iostream>
 
-using namespace std;
-
 const short MAX = 20;
 
 struct Voyage {
@@ -26,18 +24,18 @@ struct TousLesVoyages {
 
 void remplirVoyage(Voyage &voy)
 {
-  cout << "Donne moi la destination : " << flush;
-  cin >> voy.dest;
+  std::cout << "Donne moi la destination : " << std::flush;
+  std::cin >> voy.dest;
   do {
-    cout << "Choisi parmi les possibilités suivants : " << endl;
-    cout << "1. Afrique\n" << "2. Amérique\n" << "3. Asie\n" << "4. Europe\n"
-         << "5. Océanie" << endl;
-    cin >> voy.cont;
+    std::cout << "Choisi parmi les possibilités suivants : " << std::endl;
+    std::cout << "1. Afrique\n" << "2. Amérique\n" << "3. Asie\n" << "4. Europe\n"
+         << "5. Océanie" << std::endl;
+    std::cin >> voy.cont;
   } while (voy.cont < 1 && voy.cont > 5);
-  cout << "Donne moi la durée : " << flush;
-  cin >> voy.dur;
-  cout << "Donne moi la note : " << flush;
-  cin >> voy.note;
+  std::cout << "Donne moi la durée : " << std::flush;
+  std::cin >> voy.dur;
+  std::cout << "Donne moi la note : " << std::flush;
+  std::cin >> voy.note;
   
   // Pour faciliter le travail avec le tableau d'après
   voy.cont -= 1;
@@ -118,8 +116,8 @@ int main()
   do {
     char c;
     ajouteVoyage(tVoy);
-    cout << "On continue (y/n) : " << endl;
-    cin >> c;
+    std::cout << "On continue (y/n) : " << std::endl;
+    std::cin >> c;
     if (c == 'n')
       break;
   } while (true);
@@ -127,22 +125,22 @@ int main()
   leMieuxEtLePire(tVoy, mieux, pire);
   
   //FIXME: Réécrire le code
-  cout << "Le continent préféré est : " << flush;
+  std::cout << "Le continent préféré est : " << std::flush;
   switch (mieux) {
     case 0:
-      cout << "Afrique" << endl;
+      std::cout << "Afrique" << std::endl;
       break;
     case 1:
-      cout << "Amérique" << endl;
+      std::cout << "Amérique" << std::endl;
       break;
     case 2:
-      cout << "Asie" << endl;
+      std::cout << "Asie" << std::endl;
       break;
     case 3:
-      cout << "Europe" << endl;
+      std::cout << "Europe" << std::endl;
       break;
     case 4:
-      cout << "Océanie" << endl;
+      std::cout << "Océanie" << std::endl;
       break;
       
     default:
@@ -150,22 +148,22 @@ int main()
   }
   
   //FIXME: Réécrire le code
-  cout << "Le continent moins aimé : " << flush;
+  std::cout << "Le continent moins aimé : " << std::flush;
   switch (pire) {
     case 0:
-      cout << "Afrique" << endl;
+      std::cout << "Afrique" << std::endl;
       break;
     case 1:
-      cout << "Amérique" << endl;
+      std::cout << "Amérique" << std::endl;
       break;
     case 2:
-      cout << "Asie" << endl;
+      std::cout << "Asie" << std::endl;
       break;
     case 3:
-      cout << "Europe" << endl;
+      std::cout << "Europe" << std::endl;
       break;
     case 4:
-      cout << "Océanie" << endl;
+      std::cout << "Océanie" << std::endl;
       break;
       
     default:

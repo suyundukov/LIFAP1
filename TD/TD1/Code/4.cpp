@@ -1,20 +1,18 @@
 /* Demander un entier entre les bornes imposées */
 #include <iostream>
 
-using namespace std;
-
 int main()
 {
   int a;
 
-  cout << "Donne moi un entier entre 1 et 31 : ";
-  cin >> a;
+  std::cout << "Donne moi un entier entre 1 et 31 : " << std::flush;
+  std::cin >> a;
 
   while (a < 1 || a > 31) {
-    cout << "Donne moi un entier ENTRE 1 et 31 : ";
-    cin >> a;
+    std::cout << "Donne moi un entier ENTRE 1 et 31 : " << std::flush;
+    std::cin >> a;
   }
 
-  cout << "Tout est OK !\n";
+  std::cout << "Tout est OK !" << std::endl;
   return 0;
 }

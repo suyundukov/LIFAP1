@@ -1,17 +1,15 @@
 /* Afficher la table de multiplication d'un entier */
 #include <iostream>
 
-using namespace std;
-
 int main()
 {
   int a;
 
-  cout << "Donne moi une valeur : ";
-  cin >> a;
+  std::cout << "Donne moi une valeur : " << std::flush;
+  std::cin >> a;
 
   for (int i = 0; i <= 10; ++i) {
-    cout << a << " * " << i << " = " << a * i << endl;
+    std::cout << a << " * " << i << " = " << a * i << std::endl;
   }
 
   return 0;

@@ -2,8 +2,6 @@
 #include <iostream>
 #include "myimage.h"
 
-using namespace std;
-
 /* Procédure */
 
 void seuillage(MyImage &im1, int n)
@@ -28,6 +26,6 @@ int main()
   
   seuillage(im1, 150); // Seuillage
   
-  cout << endl;
+  std::cout << std::endl;
   return 0;
 }

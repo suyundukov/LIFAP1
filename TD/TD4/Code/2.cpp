@@ -1,8 +1,6 @@
 /* Effectuer la permutation de trois variables */
 #include <iostream>
 
-using namespace std;
-
 /* Procédure */
 
 void permut(int &a, int &b, int &c)
@@ -28,9 +26,9 @@ int main()
   
   permut(a, b, c);
   
-  cout << "a = " << a << endl;
-  cout << "b = " << b << endl;
-  cout << "c = " << c << endl;
+  std::cout << "a = " << a << std::endl;
+  std::cout << "b = " << b << std::endl;
+  std::cout << "c = " << c << std::endl;
   
   return 0;
 }

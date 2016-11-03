@@ -4,8 +4,6 @@
 /* 4. Procédure -> Afficher les valeurs des différents pixels */
 #include <iostream>
 
-using namespace std;
-
 /* Déclaration des variables */
 
 const int MAX_SIZE = 256;
@@ -28,7 +26,7 @@ MyImage remplitImage(MyImage im1, int tX, int tY)
   
   for (int i = 0; i < im1.sizeV; ++i) {
     for (int j = 0; j < im1.sizeH; ++j) {
-      cin >> im1.couleur[i][j];
+      std::cin >> im1.couleur[i][j];
     }
   }
   
@@ -39,7 +37,7 @@ MyImage remplitImage(MyImage im1, int tX, int tY)
 
 void afficheValeur(MyImage im1, int pX, int pY)
 {
-  cout << im1.couleur[pX][pY];
+  std::cout << im1.couleur[pX][pY] << std::endl;
 }
 
 /* Utilisation */
@@ -55,6 +53,5 @@ int main()
   
   afficheValeur(im1, 0, 1); // Affichage de valeur d'un certain pixel
   
-  cout << endl;
   return 0;
 }

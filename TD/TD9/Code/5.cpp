@@ -2,8 +2,6 @@
 #include "myimage.h"
 #include <iostream>
 
-using namespace std;
-
 /* Procédure */
 
 void minMaxMoy(MyImage im1, int &min, int &max, float &moy)
@@ -38,8 +36,7 @@ int main()
   
   minMaxMoy(im1, min, max, moy); // Extraction de niveau de gris
   
-  cout << min << " " << max << " " << moy;
+  std::cout << min << " " << max << " " << moy << std::endl;
   
-  cout << endl;
   return 0;
 }

@@ -1,8 +1,6 @@
 /* Afficher les valeurs contenues dans le tableau */
 #include <iostream>
 
-using namespace std;
-
 /* Procédure */
 
 void afficheTableau(float tab[], int n)
@@ -10,7 +8,7 @@ void afficheTableau(float tab[], int n)
   tab[n] = {};
   
   for (int i = 0; i < n; ++i) {
-    cout << tab[i] << " | ";
+    std::cout << tab[i] << " | " << std::flush;
   }
 }
 
@@ -22,6 +20,6 @@ int main()
   
   afficheTableau(tab, 9);
   
-  cout << endl;
+  std::cout << std::endl;
   return 0;
 }

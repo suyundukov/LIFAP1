@@ -1,8 +1,6 @@
 /* Retourner la chaîne équivalente en majuscule */
 #include <iostream>
 
-using namespace std;
-
 /* Procédure */
 
 void minToMaj(char c[], char c1[])
@@ -24,8 +22,6 @@ int main()
   
   minToMaj(c, c1);
   
-  cout << c1;
-  
-  cout << endl;
+  std::cout << c1 << std::endl;
   return 0;
 }

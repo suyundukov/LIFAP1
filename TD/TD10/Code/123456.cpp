@@ -9,8 +9,6 @@
 #include <cstring>
 #include <iostream>
 
-using namespace std;
-
 const int sizeG = 2;
 
 /* Procédure 1 */
@@ -35,8 +33,8 @@ void remplirGrille(char tab[sizeG][sizeG][15])
   srand(time(NULL));
   
   for (int i = 0; i < ((sizeG * sizeG) / 2); ++i) {
-    cout << "Donne moi une chaîne : ";
-    cin >> temp;
+    std::cout << "Donne moi une chaîne : " << std::flush;
+    std::cin >> temp;
     
     for (int j = 0; j < 2; ++j) {
       do {
@@ -70,11 +68,11 @@ void afficheChoix(char tab[sizeG][sizeG][15], char sol[sizeG][sizeG][15],
   for (int i = 0; i < sizeG; ++i) {
     for (int j = 0; j < sizeG; ++j) {
       if ((i == pX && j == pY) || (i == pX1 && j == pY1))
-        cout << tab[i][j] << "\t";
+        std::cout << tab[i][j] << "\t" << std::flush;
       else
-        cout << sol[i][j] << "\t";
+        std::cout << sol[i][j] << "\t" << std::flush;
     }
-    cout << endl;
+    std::cout << std::endl;
   }
 }
 
@@ -86,10 +84,16 @@ void choix(char tab[sizeG][sizeG][15], char sol[sizeG][sizeG][15],
   int pY;
   int pY1;
   
-  cout << "Donne moi les coordonées de la 1ère case : ";
-  cin >> pX >> pY;
-  cout << "Donne moi les coordonnées de la 2ème case : ";
-  cin >> pX1 >> pY1;
+  std::cout << "Donne moi les coordonées de la 1ère case :" << std::flush;
+  std::cout << "X : " << std::flush;
+  std::cin >> pX;
+  std::cout << "Y : " << std::flush;
+  std::cin >> pY;
+  std::cout << "Donne moi les coordonnées de la 2ème case : " << std::flush;
+  std::cout << "X : " << std::flush;
+  std::cin >> pX1;
+  std::cout << "Y : " << std::flush;
+  std::cin >> pY1;
   
   afficheChoix(tab, sol, pX, pY, pX1, pY1);
   if (verif(tab, sol, pX, pY, pX1, pY1)) {
@@ -119,7 +123,7 @@ int main()
   remplirGrille(tab); // Remplissage de la grille principal
   
   while ((pl1 + pl2) < (sizeG * sizeG / 2)) {
-    cout << "C'est le tour de joueur " << player << endl;
+    std::cout << "C'est le tour de joueur " << player << std::endl;
     
     choix(tab, sol, pl1, pl2, player);
     
@@ -135,13 +139,12 @@ int main()
       player = 1;
     else
       player = 2;
-    cout << "Bravo ! Le joueur " << player << " a gagné. Le score est " << pl1
-    << " : " << pl2 << endl;
+    std::cout << "Bravo ! Le joueur " << player << " a gagné. Le score est "
+              << pl1 << " : " << pl2 << std::endl;
   } else {
-    cout << "Pas de gagnant! La loose, le match est nul. Le score est " << pl1
-    << " : " << pl2 << endl;
+    std::cout << "Pas de gagnant! La loose, le match est nul. Le score est "
+              << pl1 << " : " << pl2 << std::endl;
   }
   
-  cout << endl;
   return 0;
 }

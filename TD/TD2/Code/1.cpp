@@ -2,21 +2,21 @@
 #include <cmath> // Contient la fonction pow()
 #include <iostream>
 
-using namespace std;
-
 int main()
 {
-  int a, i;
-  int b = 0;
+  int a;
+  int b;
+
+  b = 0;
   
-  cout << "Donne moi une valeur : ";
-  cin >> a;
+  std::cout << "Donne moi une valeur : " << std::flush;
+  std::cin >> a;
   
-  for (i = 0; i < a; ++i) {
+  for (int i = 0; i < a; ++i) {
     b += pow(2, i);
   }
   
-  cout << b << endl;
+  std::cout << b << std::endl;
   
   return 0;
 }

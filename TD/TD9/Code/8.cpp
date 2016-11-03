@@ -2,8 +2,6 @@
 #include "myimage.h"
 #include <iostream>
 
-using namespace std;
-
 /* Procédure */
 
 MyImage sommeImage(MyImage im1, MyImage im2)
@@ -35,6 +33,6 @@ int main()
   
   im3 = sommeImage(im1, im2); // Appel de la fonction
   
-  cout << endl;
+  std::cout << std::endl;
   return 0;
 }

@@ -10,9 +10,9 @@ void affParLigne(float tab[5][5])
 {
   for (int i = 0; i < 5; ++i) {
     for (int j = 0; j < 5; ++j) {
-      cout << tab[i][j] << " ";
+      std::cout << tab[i][j] << " " << std::flush;
     }
-    cout << endl;
+    std::cout << std::endl;
   }
 }
 
@@ -22,9 +22,9 @@ void affParColonne(float tab[5][5])
 {
   for (int i = 0; i < 5; ++i) {
     for (int j = 0; j < 5; ++j) {
-      cout << tab[j][i] << " ";
+      std::cout << tab[j][i] << " " << std::flush;
     }
-    cout << endl;
+    std::cout << std::endl;
   }
 }
 
@@ -32,16 +32,17 @@ void affParColonne(float tab[5][5])
 
 int main()
 {
-  float tab[5][5] = { {1, 2, 3, 4, 5},
+  float tab[5][5] = { 
+    {1, 2, 3, 4, 5},
     {1, 2, 3, 4, 5},
     {1, 2, 3, 4, 5},
     {1, 2, 3, 4, 5},
     {1, 2, 3, 4, 5} };
   
-  cout << "Affichage ligne par ligne\n";
+  std::cout << "Affichage ligne par ligne" << std::endl;
   affParLigne(tab); // Affichage ligne par ligne
   
-  cout << "Affichage colonne par colonne\n";
+  std::cout << "Affichage colonne par colonne" << std::endl;
   affParColonne(tab); // Affichage colonne par colonne
   
   return 0;

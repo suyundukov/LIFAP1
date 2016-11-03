@@ -2,8 +2,6 @@
 #include <cstdlib> // Contient la fonction rand()
 #include <iostream>
 
-using namespace std;
-
 int main() 
 {
   int a;
@@ -14,20 +12,20 @@ int main()
   b = 0;
   
   do {
-    cout << "Donne une valeur : ";
-    cin >> c;
+    std::cout << "Donne moi une valeur : " << std::flush;
+    std::cin >> c;
     if (c > a) {
-      cout << "C'est trop\n";
+      std::cout << "C'est trop" << std::endl;
     } else if (c < a) {
-      cout << "C'est pas assez\n";
+      std::cout << "C'est pas assez" << std::endl;
     }
     b++;
   } while (((c < a) || (c >a)) && (b < 6));
   
   if (c == a) {
-    cout << "Gagné\n";
+    std::cout << "Gagné" << std::endl;
   } else {
-    cout << "Perdu\n";
+    std::cout << "Perdu" << std::endl;
   }
   
   return 0;

@@ -1,18 +1,16 @@
 /* Calculer et afficher le carré de nombre demandé à USER */
 #include <iostream>
 
-using namespace std;
-
 int main()
 {
   int a;
   int b;
 
-  cout << "Donne moi une valeur : ";
-  cin >> a;
+  std::cout << "Donne moi une valeur : " << std::flush;
+  std::cin >> a;
 
   b = a * a;
 
-  cout << "Le carré de " << a << " est " << b << endl;
+  std::cout << "Le carré de " << a << " est " << b << std::endl;
   return 0;
 }

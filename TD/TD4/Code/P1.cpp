@@ -2,8 +2,6 @@
 #include <cmath>
 #include <iostream>
 
-using namespace std;
-
 /* Procédure */
 
 void racine(float a, float b, float c, float &x1, float &x2)
@@ -31,6 +29,6 @@ int main()
   
   racine(3, 5, 7, x1, x2);
   
-  cout << "x1 = " << x1 << "\n" << "x2 = " << x2 << endl;
+  std::cout << "x1 = " << x1 << "\n" << "x2 = " << x2 << std::endl;
   return 0;
 }

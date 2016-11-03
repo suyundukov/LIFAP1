@@ -1,8 +1,6 @@
 /* Retourner une nouvelle chaîne de caractère sans voyelles */
 #include <iostream>
 
-using namespace std;
-
 /* Procédure */
 
 void sansVoyelle(char c[], char c1[])
@@ -31,8 +29,7 @@ int main()
   
   sansVoyelle(c, c1);
   
-  cout << c1;
+  std::cout << c1 << std::endl;
   
-  cout << endl;
   return 0;
 }

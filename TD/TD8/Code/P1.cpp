@@ -1,8 +1,6 @@
 /* Effectuer le codage de césar */
 #include <iostream>
 
-using namespace std;
-
 /* Procédure */
 
 void codageCesar(char c[], int n) // N est la distance fixe
@@ -36,8 +34,7 @@ int main()
   
   codageCesar(c, 3);
   
-  cout << c;
+  std::cout << c << std::endl;
   
-  cout << endl;
   return 0;
 }

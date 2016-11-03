@@ -2,8 +2,6 @@
 #include "myimage.h"
 #include <iostream>
 
-using namespace std;
-
 /* Fonction */
 
 MyImage miroirImage(MyImage im1)
@@ -30,6 +28,6 @@ int main()
   
   im2 = miroirImage(im1); // Appel de la fonction
   
-  cout << endl;
+  std::cout << std::endl;
   return 0;
 }

@@ -2,8 +2,6 @@
 #include <cstring>
 #include <iostream>
 
-using namespace std;
-
 /* Fonction */
 
 bool polindrome(char c[])
@@ -32,10 +30,9 @@ int main()
   char mot[] = "kayak";
   
   if (polindrome(mot))
-    cout << "Vrai";
+    std::cout << "Vrai" << std::endl;
   else
-    cout << "Faux";
+    std::cout << "Faux" << std::endl;
   
-  cout << endl;
   return 0;
 }

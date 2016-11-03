@@ -1,8 +1,6 @@
 /* Déclarer et initialiser à 0 un tableau à 2 dimension */
 #include <iostream>
 
-using namespace std;
-
 int main() {
   int tab[5][5];
   
@@ -12,6 +10,6 @@ int main() {
     }
   }
   
-  cout << endl;
+  std::cout << std::endl;
   return 0;
 }

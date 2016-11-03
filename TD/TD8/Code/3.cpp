@@ -1,8 +1,6 @@
 /* Construire dans une nouvelle chaîne, le mirroir d'une autre chaîne */
 #include <iostream>
 
-using namespace std;
-
 /* Procédure */
 
 void mirroirCar(char c[], char c1[], int n)
@@ -21,8 +19,6 @@ int main()
   
   mirroirCar(mot, mot1, 7);
   
-  cout << mot1;
-  
-  cout << endl;
+  std::cout << mot1 << std::endl;
   return 0;
 }

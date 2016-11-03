@@ -3,8 +3,6 @@
 /* 3. Sous-programme -> Utliser ces deux fonction    */
 #include <iostream>
 
-using namespace std;
-
 /* Fonction 1 */
 
 float perimCercle(int ray)
@@ -47,12 +45,13 @@ int main()
   float per;
   float air;
   
-  cout << "Donne moi une valeur : ";
-  cin >> ray;
+  std::cout << "Donne moi une valeur : " << std::flush;
+  std::cin >> ray;
   
   sousProg(ray, per, air);
   
-  cout << "Le perimetre est " << per << "\nLa surface est " << air << endl;
+  std::cout << "Le perimetre est " << per << std::endl;
+  std::cout << "La aire est " << air << std::endl;
   
   return 0;
 }

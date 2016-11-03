@@ -1,8 +1,6 @@
 /* Retourner l'indice de la plus petite valeur contenue dans le tableau */
 #include <iostream>
 
-using namespace std;
-
 /* Procédure */
 
 float rechercheMin(float tab[], int n)
@@ -27,7 +25,7 @@ int main()
 {
   float tab[9] = {5, 18.5, 13.2, 8.75, 2, 15, 13.5, 6, 17};
   
-  cout << rechercheMin(tab, 9) << endl;
+  std::cout << rechercheMin(tab, 9) << std::endl;
   
   return 0;
 }
