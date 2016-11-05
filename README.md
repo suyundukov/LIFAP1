@@ -1,4 +1,6 @@
-![LIFAP1 - logo][1]
+<p align="center">
+  <img src="https://i1.sumaxi.me/i/lifap1.png">
+</p>
 
 Table of Contents
 -----------------
@@ -91,6 +93,7 @@ Courses
   - [Sujet](TP/TP2/TP2.pdf)
   - [Corrigé](TP/TP2/TP2-cor.pdf)
   - [Source Code](TP/TP2/Code)
+    - [Python](TP/TP2/Code/Python) :snake:
 - [TP3 : Passage de paramètres / GRAPIC](TP/TP3)
   - [Sujet](TP/TP3/TP3.pdf)
   - [Corrigé](TP/TP3/TP3-cor.pdf)
@@ -137,6 +140,7 @@ int combin(int n, int p); // Combination Function
 - TD9 : [P1.cpp](TD/TD7/Code/P1.cpp) `Code`
 - TD12 : [123456.cpp](TD/TD12/Code/123456.cpp) `Rewrite the code`
 
-[1]: https://i1.sumaxi.me/i/lifap1.png
+
+
 [2]: http://liris.cnrs.fr/alexandre.meyer/grapic/html/index.html
 [3]: https://git.io/vXZXX
