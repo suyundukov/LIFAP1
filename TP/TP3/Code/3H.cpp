@@ -3,7 +3,7 @@
 
 using namespace grapic;
 
-const int size = 500;
+const int DIMW = 500;
 
 /* Procédure */
 
@@ -16,21 +16,21 @@ void grilleImage()
   Image im2 = image("data/flag.png");
   Image im3 = image("data/grapic.png");
   
-  for(int i = 0; i < ligne; ++i) {
-    for(int j = 0; j < col; ++j) {
+  for (int i = 0; i < ligne; ++i)
+    for (int j = 0; j < col; ++j) {
       rNum = rand () % 3;
       if (rNum == 0) {
-        image_draw(im1, i * (size / ligne), j * (size / col), (size/ligne),
-          (size / col));
-      } else if (rNum ==1) {
-        image_draw(im2, i * (size / ligne), j * (size / col), (size / ligne),
-          (size / col));
+        image_draw(im1, i * (DIMW / ligne), j * (DIMW / col), (DIMW/ligne),
+          (DIMW / col));
+      } else if (rNum == 1) {
+        image_draw(im2, i * (DIMW / ligne), j * (DIMW / col), (DIMW / ligne),
+          (DIMW / col));
       } else {
-        image_draw(im3, i * (size / ligne), j * (size / col), (size/ligne),
-          (size/col));
+        image_draw(im3, i * (DIMW / ligne), j * (DIMW / col), (DIMW/ligne),
+          (DIMW/col));
       }
     }
-  }
+
   delay(5000);
 }
 
@@ -38,11 +38,11 @@ void grilleImage()
 
 int main()
 {
-  winInit("Grille d'images", size, size);
+  winInit("Grille d'images", DIMW, DIMW);
   backgroundColor(255, 255, 255);
   winClear();
   
-  grilleImage(); // <- Appel à la procédure
+  grilleImage(); // Debug
   
   winDisplay();
   pressSpace();

@@ -2,8 +2,6 @@
 /* 2. Afficher les 15 premières valeurs des factorielles */
 #include <iostream>
 
-using namespace std;
-
 /* Fonction */
 
 double fact(int a)
@@ -18,10 +16,8 @@ double fact(int a)
 
 int main()
 {
-  for (int i = 0; i < 15; ++i) {
-    cout << i << "! = " << fact(i) << "\n";
-  }
+  for (int i = 0; i < 15; ++i)
+    std::cout << i << "! = " << fact(i) << std::endl;
 
-  cout << endl;
   return 0;
 }

@@ -6,8 +6,6 @@
 #include <cstring>
 #include <iostream>
 
-using namespace std;
-
 const int MAX = 100;
 
 /* Fonction 1 */
@@ -22,13 +20,11 @@ bool toutMinMaj(char c[MAX])
   p = false;
   sum = 0.0;
   
-  for (int i = 0; i < n ; ++i) {
-    if (c[i] >= 65 && c[i] <= 90) {
+  for (int i = 0; i < n ; ++i)
+    if (c[i] >= 65 && c[i] <= 90)
       sum += 1.0;
-    } else {
+    else
       sum += 3.0;
-    }
-  }
   
   if (sum / n == 1.0 || sum / n == 3.0)
     p = true;
@@ -46,10 +42,9 @@ int nbrOccur(char c[MAX], char c1)
   
   n = 0;
   
-  for (int i = 0; c[i] != '\0'; ++i) {
+  for (int i = 0; c[i] != '\0'; ++i)
     if (c[i] == c1)
       ++n;
-  }
   
   return n;
 }
@@ -67,16 +62,14 @@ bool anagram(char c[MAX], char c1[MAX])
   else
     n = false;
   
-  if (n) {
-    for (int i = 0; c[i] != '\0'; ++i) {
+  if (n)
+    for (int i = 0; c[i] != '\0'; ++i)
       if (nbrOccur(c, c[i]) == nbrOccur(c1, c[i])) {
         n = true;
       } else {
         n = false;
         break;
       }
-    }
-  }
   
   return n;
 }
@@ -88,24 +81,24 @@ int main()
   char c[MAX] = "";
   char c1[MAX] = "";
   
-  cout << "Donne moi une chaîne : ";
-  cin >> c;
-  cout << "Donne moi une autre chaîne : ";
-  cin >> c1;
+  std::cout << "Donne moi une chaîne : " << std::flush;
+  std::cin >> c;
+  std::cout << "Donne moi une autre chaîne : " << std::flush;
+  std::cin >> c1;
   
   while (!toutMinMaj(c) || !toutMinMaj(c1)) {
-    cout << "Les chaînes doivent être soit tout en MAJ, soit tout en min.\n";
-    cout << "Donne moi une chaîne : ";
-    cin >> c;
-    cout << "Donne moi une autre chaîne : ";
-    cin >> c1;
+    std::cout << "Les chaînes doivent être soit tout en MAJ,
+                  soit tout en min." << std::endl;
+    std::cout << "Donne moi une chaîne : " << std::flush;
+    std::cin >> c;
+    std::cout << "Donne moi une autre chaîne : " << std::flush;
+    std::cin >> c1;
   }
   
   if (anagram(c, c1))
-    cout << "Ces sont des anagrammes !";
+    std::cout << "Ces sont des anagrammes !" << std::endl;
   else
-    cout << "Nope !!!";
+    std::cout << "Nope !!!" << std::endl;
   
-  cout << endl;
   return 0;
 }

@@ -1,11 +1,9 @@
 /* Premier programme en C++ */
 #include <iostream>
 
-using namespace std;
-
-int main(void)
+int main()
 {
-  cout << "Hello, World !";
+  std::cout << "Hello, World !" << std::endl;
 
   return 0;
 }

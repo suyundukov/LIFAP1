@@ -3,20 +3,20 @@
 
 using namespace grapic;
 
-const int size = 500;
+const int DIMW = 500;
 
 /* Procédure */
 
 void dessineCarre(int a)
 {
-  rectangle(size / 2 - a, size/2 - a, size/2 + a, size/2 + a);
+  rectangle(DIMW / 2 - a, DIMW/2 - a, DIMW/2 + a, DIMW/2 + a);
 }
 
 /* Utilisation */
 
 int main()
 {
-  winInit("Carré", size, size);
+  winInit("Carré", DIMW, DIMW);
   backgroundColor(255, 255, 255);
   winClear();
   

@@ -2,13 +2,11 @@
 #include <cstring>
 #include <iostream>
 
-using namespace std;
-
-const int MAX_SIZE = 100;
+const int SIZE = 100;
 
 /* Fonction */
 
-bool chCompare(char c[MAX_SIZE], char c1[MAX_SIZE])
+bool chCompare(char c[SIZE], char c1[SIZE])
 {
   bool n;
   int i;
@@ -17,11 +15,10 @@ bool chCompare(char c[MAX_SIZE], char c1[MAX_SIZE])
   i = 0;
   
   while (n != false && i < (strlen(c) - 1)) {
-    if (c1[i] != c[i]) {
+    if (c1[i] != c[i])
       n = false;
-    } else {
+    else
       n = true;
-    }
     ++i;
   }
   
@@ -32,14 +29,13 @@ bool chCompare(char c[MAX_SIZE], char c1[MAX_SIZE])
 
 int main()
 {
-  char c[MAX_SIZE] = "Marshall";
-  char c1[MAX_SIZE] = "Lolipop";
+  char c[SIZE] = "Marshall";
+  char c1[SIZE] = "Lolipop";
   
   if (chCompare(c, c1)) // Appel de la fonction
-    cout << "Vrai";
+    std::cout << "Vrai" << std::endl;
   else
-    cout << "Faux";
+    std::cout << "Faux" << std::endl;
   
-  cout << endl;
   return 0;
 }

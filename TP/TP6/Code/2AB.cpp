@@ -5,8 +5,6 @@
 #include <cmath>
 #include <iostream>
 
-using namespace std;
-
 const short DMAX = 100;
 
 // Structure d'une image
@@ -19,21 +17,18 @@ struct Image {
 // Initialisation de l'image
 void initImage(Image &im1, char c)
 {
-  for (int i = 0; i < im1.x; ++i) {
-    for (int j = 0; j < im1.y; ++j) {
+  for (int i = 0; i < im1.x; ++i)
+    for (int j = 0; j < im1.y; ++j)
       im1.tab[i][j] = c;
-    }
-  }
 }
 
 // Affichage de l'image
 void affImage(Image im1)
 {
   for (int i = 0; i < im1.x; ++i) {
-    for (int j = 0; j < im1.y; ++j) {
-      cout << im1.tab[i][j] << flush;
-    }
-    cout << endl;
+    for (int j = 0; j < im1.y; ++j)
+      std::cout << im1.tab[i][j] << std::flush;
+    std::cout << std::endl;
   }
 }
 
@@ -63,7 +58,7 @@ void ImDessineCercle(Image &im1, char c, int x0, int y0, int r)
 {
   int y;
 
-  for(int i = x0 - r; i <= x0 + r; ++i) {
+  for (int i = x0 - r; i <= x0 + r; ++i) {
     y = (int)sqrt((float)(r * r - (x0 - i) * (x0 - i)));
     im1.tab[i][y0 + y] = c;
     im1.tab[i][y0 - y] = c;
@@ -84,7 +79,7 @@ int main(void)
   ImDessineRect(im1, plein, 2, 8, 7, 1);
   affImage(im1);
   
-  cout << endl;
+  std::cout << std::endl;
 
   initImage(im1,vide);
   ImDessineCercle(im1, 'x', 5, 5, 4);

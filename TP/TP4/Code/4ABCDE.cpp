@@ -5,55 +5,53 @@
 /* 5. Programme principal */
 #include <iostream>
 
-using namespace std;
-
 /* Procédure 1 */
 
-void initialiseGrille(char gr[3][3])
+void initialiseGrille(char tab[3][3])
 {
-  for (int i = 0; i < 3; ++i) {
-    for (int j = 0; j < 3; ++j) {
-      gr[i][j] = '_';
-    }
-  }
+  for (int i = 0; i < 3; ++i)
+    for (int j = 0; j < 3; ++j)
+      tab[i][j] = '_';
 }
 
 /* Procédure 2 */
 
-void afficheGrille(char gr[3][3])
+void afficheGrille(char tab[3][3])
 {
   for (int i = 0; i < 3; ++i) {
-    for (int j = 0; j < 3; ++j) {
-      cout << gr[i][j] << "\t";
-    }
-    cout << endl;
+    for (int j = 0; j < 3; ++j)
+      std::cout << tab[i][j] << "\t" << std::flush;
+    std::cout << std::endl;
   }
 }
 
 /* Procédure 3 */
 
-void metUnPionSurLaGrille(char gr[3][3], char player)
+void metUnPionSurLaGrille(char tab[3][3], char player)
 {
   int pY;
   int pX;
   
   do {
-    cout << "Donne moi les coordonées : ";
-    cin >> pY >> pX;
+    std::cout << "Donne moi les coordonées" << std::endl;
+    std::cout << "X : " << std::flush;
+    std::cin >> pY;
+    std::cout << "Y : " << std::flush;
+    std::cin >> pX;
     
-    if (gr[pY][pX] == 'X' || gr[pY][pX] == 'O')
-      cout << "Cette case est déjà remplie. Recommence !" << endl;
-  } while ((pY > 3 && pY < 0) || (pX > 3 && pX < 0) || gr[pY][pX] != '_');
+    if (tab[pY][pX] == 'X' || tab[pY][pX] == 'O')
+      std::cout << "Cette case est déjà remplie. Recommence !" << std::endl;
+  } while ((pY > 3 && pY < 0) || (pX > 3 && pX < 0) || tab[pY][pX] != '_');
   
   if (player == 1)
-    gr[pY][pX] = 'X';
+    tab[pY][pX] = 'X';
   else
-    gr[pY][pX] = 'O';
+    tab[pY][pX] = 'O';
 }
 
 /* Fonction */
 
-bool testFinJeu(char gr[3][3], int &plWin)
+bool testFinJeu(char tab[3][3], int &plWin)
 {
   bool n;
   float sumH;
@@ -66,21 +64,22 @@ bool testFinJeu(char gr[3][3], int &plWin)
     sumV = 0;
     for (int j = 0; j < 3; ++j) {
       // Case horizontale
-      if (gr[i][j] == 'X')
+      if (tab[i][j] == 'X')
         sumH += 1.0;
-      else if (gr[i][j] == 'O')
+      else if (tab[i][j] == 'O')
         sumH += 5.0;
       else
         sumH += 20.0;
       // Case verticale
-      if (gr[j][i] == 'X')
+      if (tab[j][i] == 'X')
         sumV += 1.0;
-      else if (gr[j][i] == 'O')
+      else if (tab[j][i] == 'O')
         sumV += 5.0;
       else
         sumH += 20.0;
     }
-    if (sumH / 3.0 == 1 || sumV / 3.0 == 1 || sumH / 15.0 == 1 || sumV / 15.0 == 1) {
+    if (sumH / 3.0 == 1 || sumV / 3.0 == 1
+        || sumH / 15.0 == 1 || sumV / 15.0 == 1) {
       n = true;
       if (sumH / 3.0 == 1 || sumV / 3.0 == 1)
         plWin = 1;
@@ -90,10 +89,11 @@ bool testFinJeu(char gr[3][3], int &plWin)
     }
   }
   // Case diagonale
-  if (((gr[0][0] == gr[1][1] && gr[1][1] == gr[2][2]) ||
-      (gr[0][2] == gr[1][1] && gr[1][1] == gr[2][0])) && gr[1][1] != '_') {
+  if (((tab[0][0] == tab[1][1] && tab[1][1] == tab[2][2])
+      || (tab[0][2] == tab[1][1] && tab[1][1] == tab[2][0]))
+      && tab[1][1] != '_') {
     n = true;
-    if (gr[1][1] == 'X')
+    if (tab[1][1] == 'X')
       plWin = 1;
     else
       plWin = 2;
@@ -119,14 +119,17 @@ int main()
   while (i < 9) {
     afficheGrille(gr);
     metUnPionSurLaGrille(gr, pl);
+
     if (pl == 1)
       pl = 2;
     else
       pl = 1;
+
     ++i;
+
     if (testFinJeu(gr, plWin) == true) {
       afficheGrille(gr);
-      cout << "Bravo, joueur " << plWin << " as gagné" << endl;
+      std::cout << "Bravo, joueur " << plWin << " as gagné" << std::endl;
       break;
     }
   }

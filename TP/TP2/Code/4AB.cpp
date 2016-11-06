@@ -2,17 +2,15 @@
 #include "sunlib.hpp"
 #include <iostream>
 
-using namespace std;
-
 /* Procédure */
 
 void trianglePascal(int n)
 {
   for (int i = 0; i <= n; ++i) {
     for (int j = 0; j < i + 1; ++j) {
-      cout << combin(i, j) << " ";
+      std::cout << combin(i, j) << " " << std::flush;
     }
-    cout << endl;
+    std::cout << std::endl;
   }
 }
 

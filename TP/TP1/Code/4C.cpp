@@ -1,19 +1,16 @@
 /* Saisir une valeur entre deux bornes choisies par l’utilisateur */
 #include <iostream>
 
-using namespace std;
-
 int main()
 {
   int a;
 
   do {
-    cout << "Donner une valeur entre 1 et 10 : ";
-    cin >> a;
+    std::cout << "Donner une valeur entre 1 et 10 : " << std::flush;
+    std::cin >> a;
   } while ((a < 0) || (a > 10));
 
-  cout << "Tout est OK !";
+  std::cout << "Tout est OK !" << std::endl;
   
-  cout << endl;
   return 0;
 }

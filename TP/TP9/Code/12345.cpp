@@ -6,7 +6,6 @@
 #include <cstdlib>  // Pour pouvoir utiliser 'rand();' et 'srand();' 
 
 using namespace grapic;
-using namespace std;
 
 const short DIMW = 500;
 
@@ -32,13 +31,12 @@ struct Jeu {
 // Initialisation de la grille
 void initGrille(Jeu &game)
 {
-  for (int i = 0; i < game.dx; ++i) {
+  for (int i = 0; i < game.dx; ++i)
     for(int j = 0; j < game.dy; ++j) {
       game.tab[i][j].contenu = 0;
       game.tab[i][j].estDecouverte = false;
       game.tab[i][j].estDrapeau = false;
     }
-  }
 }
 
 // Positionnement aléatoire des miness
@@ -63,23 +61,18 @@ void poserMines(Jeu &game)
 // Comptage des mines pour les cases adjacentes
 void compterMines(Jeu &game)
 {
-  for (int i = 0; i < game.dx; ++i) {
-    for (int j = 0; j < game.dy; ++j) {
+  for (int i = 0; i < game.dx; ++i)
+    for (int j = 0; j < game.dy; ++j)
       // Si c'est une mines, alors ...
-      if (game.tab[i][j].contenu != -1) {
+      if (game.tab[i][j].contenu != -1)
         // Si i - 1 < 0, alors k = 0, sinon k = i - 1, c'est nécessaire si on
         // veut pas dépasser les limites de la grille.
-        for (int k = (i - 1 < 0) ? 0 : i - 1; k <= i + 1 && k != game.dx; ++k) {
+        for (int k = (i - 1 < 0) ? 0 : i - 1; k <= i + 1 && k != game.dx; ++k)
           // Ici pareil, si on dépasse la grille, les calculs sont bidons.
           // Ici on a : Si j - 1 < 0, alors m = 0, sinon m = j - 1
-          for (int m = (j - 1 < 0) ? 0 : j - 1; m <= j + 1 && m != game.dy; ++m) {
+          for (int m = (j - 1 < 0) ? 0 : j - 1; m <= j + 1 && m != game.dy; ++m)
             if (game.tab[k][m].contenu == -1)
               game.tab[i][j].contenu += 1;
-          }
-        }
-      }
-    }
-  }
 }
 
 // Initialisation du jeu
@@ -181,25 +174,23 @@ void cliquerDroit(Jeu &game)
 // Affichage de la grille
 void afficherGrille(Jeu game)
 {
-  for (int i = 0; i < game.dx; ++i) {
+  for (int i = 0; i < game.dx; ++i)
     for (int j = 0; j < game.dy; ++j) {
       if (game.tab[i][j].estDecouverte) {
-        if (game.tab[i][j].contenu == -1) {
+        if (game.tab[i][j].contenu == -1)
           image_draw(game.imMine, caseVersEcranX(game, i) + 5,
                      caseVersEcranY(game, j) + 5, DIMW / game.dx - 10,
                      DIMW / game.dy - 10);
-        } else {
+        else
           print(caseVersEcranX(game, i) + 16, caseVersEcranY(game, j) + 3,
                 game.tab[i][j].contenu);
-        }
       }
-      if (game.tab[i][j].estDrapeau) {
+      if (game.tab[i][j].estDrapeau)
         image_draw(game.imDrapeau, caseVersEcranX(game, i) + 5,
                      caseVersEcranY(game, j) + 5, DIMW / game.dx - 10,
                      DIMW / game.dy - 10);
-      }
     }
-  }
+
 }
 
 // Afichage complete de la grille | Utilisé à la fin du jeu

@@ -1,15 +1,12 @@
 /* Afficher une frise */
 #include <iostream>
 
-using namespace std;
-
 /* Procédure */
 
 void afficheCarre(int n, char c)
 {
-  for (int i = 0; i < n; ++i) {
-    cout << c;
-  }
+  for (int i = 0; i < n; ++i)
+    std::cout << c << std::flush;
 }
 
 /* Procédure */
@@ -21,7 +18,7 @@ void afficheFrise(int n, int l, int h)
     afficheCarre(l - 2, ' ');
   }
   
-  cout << endl;
+  std::cout << std::endl;
   
   for (int i = 1; i < h - 1; ++i) {
     for (int j = 0; j < n; ++j) {
@@ -30,7 +27,7 @@ void afficheFrise(int n, int l, int h)
       afficheCarre(1, '*');
       afficheCarre(l - 2, ' ');
     }
-  	cout << endl;
+  	std::cout << std::endl;
   }
 
   afficheCarre(1,'*');
@@ -40,7 +37,7 @@ void afficheFrise(int n, int l, int h)
     afficheCarre(l, '*');
   }
   
-  cout << endl;
+  std::cout << std::endl;
 }
 
 /* Utilisation */
@@ -49,6 +46,6 @@ int main()
 {
   afficheFrise(5, 6, 7);
   
-  cout << endl;
+  std::cout << std::endl;
   return 0;
 }

@@ -2,39 +2,38 @@
 /* 2. Procédure -> Afficher le tableau */
 #include <iostream>
 
-using namespace std;
-
-const int taille = 100;
+const int SIZE = 100;
 
 /* Procédure */
 
-void tabRemplir(int tab[taille], int tailleT)
+void tabRemplir(int tab[SIZE], int tailleT)
 {
   for (int i = 0; i < tailleT; ++i) {
-    cout << "Donne moi une valeur pour la case " << i + 1 << " : ";
-    cin >> tab[i];
+    std::cout << "Donne moi une valeur pour la case " 
+              << i + 1 << " : " << std::flush;
+    std::cin >> tab[i];
   }
 }
 
 /* Procédure */
 
-void tabAff(int tab[taille], int tailleT)
+void tabAff(int tab[SIZE], int tailleT)
 {
-  for (int i = 0; i < tailleT; ++i) {
-    cout << tab[i] << "\t";
-  }
+  for (int i = 0; i < tailleT; ++i)
+    std::cout << tab[i] << "\t" << std::flush;
 }
 
 /* Utilisation */
 
 int main()
 {
-  int tab[taille] = {};
+  int tab[SIZE] = {};
   
   tabRemplir(tab, 6);
   
   tabAff(tab, 6);
   
-  cout << endl;
+  std::cout << std::endl;
+
   return 0;
 }

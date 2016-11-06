@@ -3,27 +3,23 @@
 /* 3. Procédure -> Afficher le contour d'un carré, en utilisant ^^ */
 #include <iostream>
 
-using namespace std;
-
 /* Procédure 1 */
 
 void lignePleine(int n, char c)
 {
-  for (int i = 0; i < n; ++i) {
-    cout << c;
-  }
+  for (int i = 0; i < n; ++i)
+    std::cout << c << std::flush;
 }
 
 /* Procédure 2 */
 
 void ligneCreuse(int n, char c)
 {
-  for (int i = 0; i < n; ++i) {
+  for (int i = 0; i < n; ++i)
     if (i == 0 || i == n - 1)
-      cout << c;
+      std::cout << c << std::flush;
     else
-      cout << " ";
-  }
+      std::cout << " " << std::flush;
 }
 
 /* Procédure 3 */
@@ -31,11 +27,11 @@ void ligneCreuse(int n, char c)
 void afficheCarre(int n, char c)
 {
   lignePleine(n, c);
-  cout << endl;
+  std::cout << std::endl;
   
   for (int i = 0; i < n - 2; ++i) {
     ligneCreuse(n, c);
-    cout << endl;
+    std::cout << std::endl;
   }
   
   lignePleine(n, c);
@@ -47,6 +43,6 @@ int main()
 {
   afficheCarre(10, '*');
   
-  cout << endl;
+  std::cout << std::endl;
   return 0;
 }

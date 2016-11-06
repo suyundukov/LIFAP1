@@ -1,19 +1,16 @@
 /* Saisir et afficher une chaîne de caractères */
 #include <iostream>
 
-using namespace std;
-
 const int CHMAX = 100;
 
 int main()
 {
   char c[CHMAX] = "";
 
-  cout << "Donne moi une chaîne de caractère : ";
-  cin >> c;
+  std::cout << "Donne moi une chaîne de caractère : " << std::flush;
+  std::cin >> c;
   
-  cout << c;
+  std::cout << c << std::endl;
   
-  cout << endl;
   return 0;
 }

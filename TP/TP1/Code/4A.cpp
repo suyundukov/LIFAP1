@@ -1,20 +1,18 @@
 /* Calculer la moyenne de 2 valeurs réelles */
 #include <iostream>
 
-using namespace std;
-
 int main()
 {
   float a;
   float b;
 
-  cout << "Donne moi premier chiffre : ";
-  cin >> a;
-  cout << "Donne moi deuxième chiffre : ";
-  cin >> b;
+  std::cout << "Donne moi premier chiffre : " << std::flush;
+  std::cin >> a;
+  std::cout << "Donne moi deuxième chiffre : " << std::flush;
+  std::cin >> b;
 
-  cout << "La moyenne de " << a << " et " << b << " est " << (a + b) / 2;
+  std::cout << "La moyenne de " << a << " et " << b << " est "
+            << (a + b) / 2 << std::endl;
   
-  cout << endl;
   return 0;
 }

@@ -3,7 +3,7 @@
 
 using namespace grapic;
 
-const int size = 500;
+const int DIMW = 500;
 
 /* Procédure */
 
@@ -15,8 +15,8 @@ void imageDiminue()
   for (int i = 0; i < nmbr; i++) {
     winClear();
     image_draw(im,
-               size / 2 - (400 - i * 400 / nmbr) / 2,
-               size / 2 - (400 - i * 400 / nmbr) / 2,
+               DIMW / 2 - (400 - i * 400 / nmbr) / 2,
+               DIMW / 2 - (400 - i * 400 / nmbr) / 2,
                400 - i * 400 / nmbr,
                400 - i * 400 / nmbr);
     winDisplay();
@@ -28,7 +28,7 @@ void imageDiminue()
 
 int main()
 {
-  winInit("Cible", size, size);
+  winInit("Cible", DIMW, DIMW);
   backgroundColor(255, 255, 255);
   winClear();
   

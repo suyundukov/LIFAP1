@@ -3,21 +3,21 @@
 
 using namespace grapic;
 
-const int size = 500;
+const int DIMW = 500;
 
 /* Procédure */
 
 void dessineCercle(int ray, int r, int g, int b)
 {
   color(r, g, b);
-  circleFill(size / 2, size / 2, ray);
+  circleFill(DIMW / 2, DIMW / 2, ray);
 }
 
 /* Utilisation */
 
 int main()
 {
-  winInit("Cercle", size, size);
+  winInit("Cercle", DIMW, DIMW);
   backgroundColor(255, 255, 255);
   winClear();
   

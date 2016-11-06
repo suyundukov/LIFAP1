@@ -1,22 +1,20 @@
 /* Afficher N en enversant l'ordre des chiffres. N est saisi par USER */
 #include <iostream>
 
-using namespace std;
-
 int main()
 {
   int n;
   int temp;
   
-  cout << "Donne moi une valeur : ";
-  cin >> n;
+  std::cout << "Donne moi une valeur : " << std::flush;
+  std::cin >> n;
   
   while (n > 0) {
     temp = n % 10;
     n /= 10;
-    cout << temp;
+    std::cout << temp << std::flush;
   }
   
-  cout << endl;
+  std::cout << std::endl;
   return 0;
 }

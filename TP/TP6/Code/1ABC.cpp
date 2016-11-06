@@ -5,8 +5,6 @@
 =============================================================================*/
 #include <iostream>
 
-using namespace std;
-
 const short DMAX = 100;
 
 // Structure d'une image
@@ -20,11 +18,9 @@ struct Image {
 
 void initImage(Image &im1, char c)
 {
-  for (int i = 0; i < im1.x; ++i) {
-    for (int j = 0; j < im1.y; ++j) {
+  for (int i = 0; i < im1.x; ++i)
+    for (int j = 0; j < im1.y; ++j)
       im1.tab[i][j] = c;
-    }
-  }
 }
 
 /* Procédure 2 */
@@ -32,10 +28,9 @@ void initImage(Image &im1, char c)
 void affImage(Image im1)
 {
   for (int i = 0; i < im1.x; ++i) {
-    for (int j = 0; j < im1.y; ++j) {
-      cout << im1.tab[i][j] << flush;
-    }
-    cout << endl;
+    for (int j = 0; j < im1.y; ++j)
+      std::cout << im1.tab[i][j] << std::flush;
+    std::cout << std::endl;
   }
 }
 

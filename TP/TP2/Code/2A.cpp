@@ -3,17 +3,16 @@
 #include <ctime> // Contient la fonction srand()
 #include <iostream>
 
-using namespace std;
-
 int main()
 {
   int a;
 
   srand(time(NULL));
   
-  a = (rand() % 15) + 10; // Les bornes entre 15 et 25
+  //a = (rand() % 30) + 1;  // Les bornes entre 1 et 30
+  a = (rand() % 15) + 10;  // Les bornes entre 15 et 25
 
-  cout << "La valeur aleatoire est : " << a << endl;
+  std::cout << "La valeur aleatoire est : " << a << std::endl;
 
   return 0;
 }

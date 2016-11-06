@@ -3,34 +3,36 @@
 
 using namespace grapic;
 
-const int size = 500;
+const int DIMW = 500;
 
 /* Procédure */
 
 void dessineCarre(int a)
 {
-  rectangle(size / 2 - a, size/2 - a, size/2 + a, size/2 + a);
+  rectangle(DIMW / 2 - a, DIMW/2 - a, DIMW/2 + a, DIMW/2 + a);
 }
 
 /* Procédure Principal */
 
 void dessineCarreImbr(int n)
 {
-  int a = (size / n) / 2;
-  for (int i = n; i > 0; --i) {
+  int a;
+
+  a = (DIMW / n) / 2;
+
+  for (int i = n; i > 0; --i)
     dessineCarre(a * i);
-  }
 }
 
 /* Utilisation */
 
 int main()
 {
-  winInit("Carré Imbriqués", size, size);
+  winInit("Carré Imbriqués", DIMW, DIMW);
   backgroundColor(255, 255, 255);
   winClear();
   
-  dessineCarreImbr(10); // <- Appel à la procédure
+  dessineCarreImbr(10);  // Debug
   
   winDisplay();
   pressSpace();

@@ -2,8 +2,6 @@
 #include <cstring>
 #include <iostream>
 
-using namespace std;
-
 /* Procèdure */
 
 void chMirroir(char c[])
@@ -24,8 +22,7 @@ int main()
   
   chMirroir(c);
   
-  cout << c;
+  std::cout << c << std::endl;
   
-  cout << endl;
   return 0;
 }

@@ -1,17 +1,15 @@
 /* Transformer un entier positif en un nombre de semaines et de jours */
 #include <iostream>
 
-using namespace std;
-
 int main()
 {
   int a;
 
-  cout << "Donne moi un chiffre : ";
-  cin >> a;
+  std::cout << "Donne moi un chiffre : " << std::flush;
+  std::cin >> a;
 
-  cout << a << " => " << a / 7 << " semaines et " << a % 7 << " jours.";
+  std::cout << a << " => " << a / 7 << " semaines et " 
+            << a % 7 << " jours." << std::endl;
   
-  cout << endl;
   return 0;
 }

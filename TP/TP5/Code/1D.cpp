@@ -2,13 +2,11 @@
 #include <cstring>
 #include <iostream>
 
-using namespace std;
-
-const int MAX_SIZE = 100;
+const int SIZE = 100;
 
 /* Procèdure */
 
-void chConcat(char c[MAX_SIZE], char c1[MAX_SIZE])
+void chConcat(char c[SIZE], char c1[SIZE])
 {
   long i;
   int j;
@@ -32,13 +30,12 @@ void chConcat(char c[MAX_SIZE], char c1[MAX_SIZE])
 
 int main()
 {
-  char c[MAX_SIZE] = "Hello";
-  char c1[MAX_SIZE] = "World";
+  char c[SIZE] = "Hello";
+  char c1[SIZE] = "World";
   
   chConcat(c, c1); // Appelle de la fonction
   
-  cout << c;
-  
-  cout << endl;
+  std::cout << c << std::endl;
+
   return 0;
 }

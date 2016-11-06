@@ -5,8 +5,6 @@
 #include <cstring>
 #include <iostream>
 
-using namespace std;
-
 const int MAX = 100;
 
 /* Procédure */
@@ -41,25 +39,22 @@ bool estPalin(char c[MAX])
   
   premDer(c, c1);
   
-  if (n % 2 == 0) {
-    for (int i = 0; i < n; i += 2) {
+  if (n % 2 == 0)
+    for (int i = 0; i < n; i += 2)
       if (c1[i] == c1[i + 1]) {
         p = true;
       } else {
         p = false;
         break;
       }
-    }
-  } else {
-    for (int i = 0; i < n - 1; i += 2) {
+  else
+    for (int i = 0; i < n - 1; i += 2)
       if (c1[i] == c1[i + 1]) {
         p = true;
       } else {
         p = false;
         break;
       }
-    }
-  }
   
   return p;
 }
@@ -70,14 +65,13 @@ int main()
 {
   char c[MAX] = "";
 
-  cout << "Donne moi une chaîne de caractère : ";
-  cin >> c;
+  std::cout << "Donne moi une chaîne de caractère : " << std::flush;
+  std::cin >> c;
   
   if (estPalin(c))
-    cout << "Vrai";
+    std::cout << "Vrai" << std::endl;
   else
-    cout << "Faux";
+    std::cout << "Faux" << std::endl;
   
-  cout << endl;
   return 0;
 }

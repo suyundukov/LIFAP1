@@ -3,7 +3,7 @@
 
 using namespace grapic;
 
-const int size = 500;
+const int DIMW = 500;
 
 /* Procédure */
 
@@ -27,7 +27,7 @@ void grilleDeCarres()
 
 int main()
 {
-  winInit("Cible", size, size);
+  winInit("Cible", DIMW, DIMW);
   backgroundColor(255, 255, 255);
   winClear();
 

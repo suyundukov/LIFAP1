@@ -1,19 +1,17 @@
 /* Afficher N étoiles sur une ligne. N étant demandé à USER */
 #include <iostream>
 
-using namespace std;
-
 int main()
 {
   int a;
   
-  cout << "Combien des étoiles tu veux voir ?\n";
-  cin >> a;
+  std::cout << "Combien des étoiles tu veux voir ?" << std::endl;
+  std::cin >> a;
   
   for (int i = 0; i < a; ++i) {
-    cout << "*";
+    std::cout << "*" << std::flush;
   }
   
-  cout << endl;
+  std::cout << std::endl;
   return 0;
 }

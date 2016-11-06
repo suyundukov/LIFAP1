@@ -5,8 +5,6 @@
 =============================================================================*/
 #include <iostream>
 
-using namespace std;
-
 const int MAX = 19; // Déclaration de la constante
 
 // Fonction de remplissage de tableau
@@ -16,14 +14,13 @@ void remplirTab(int tab[MAX])
   int j;
 
   for (i = 0; i < MAX; ++i) {
-    cout << "Donne moi une valeur : ";
-    cin >> tab[i];
-    for (j = 0; j < i; ++j) {
+    std::cout << "Donne moi une valeur : " << std::flush;
+    std::cin >> tab[i];
+    for (j = 0; j < i; ++j)
       while (tab[i] == tab[j]) {
-        cout << "La valeur existe déjà. Donne moi une autre valeur : ";
-        cin >> tab[i];
+        std::cout << "La valeur existe déjà. Donne moi une autre valeur : " << std::flush;
+        std::cin >> tab[i];
       }
-    }
   }
 }
 
@@ -61,14 +58,15 @@ int main()
   
   remplirTab(tab); // Remplissage de notre tableau
   
-  cout << "Donne moi une valeur appartenant au tableau : ";
-  cin >> n;
+  std::cout << "Donne moi une valeur appartenant au tableau : " << std::flush;
+  std::cin >> n;
   
   if (mediane(tab, plusX, moinsX, n))
-    cout << n << " est la médiane de votre série de valeurs" << endl;
+    std::cout << n << " est la médiane de votre série de valeurs" << std::endl;
   else
-    cout << n << " n'est pas la médiane de votre série de valeurs car il y a "
-    << moinsX << " valeurs plus petites et " << plusX << " valeurs plus grandes." << endl;
+    std::cout << n << " n'est pas la médiane de votre série de valeurs car 
+              il y a " << moinsX << " valeurs plus petites et " << plusX
+              << " valeurs plus grandes." << std::endl;
   
   return 0;
 }

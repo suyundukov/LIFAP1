@@ -1,8 +1,5 @@
 /* Proposer à USER le menu et appeler les différents sous-programmes */
-#include "menuApp.h"
-#include <iostream>
-
-using namespace std;
+#include "menuApp.hpp"
 
 /* Utilisatoin */
 
@@ -30,9 +27,9 @@ int main()
         break;
         
       default:
-        cout << "Une erreur inconnue. Recommence" << endl;
+        std::cout << "Une erreur inconnue. Recommence" << std::flush;
     }
-    cout << endl;
+    std::cout << std::endl;
   } while (choix != '5');
   
   return 0;

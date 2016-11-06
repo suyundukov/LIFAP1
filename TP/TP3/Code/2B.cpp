@@ -1,19 +1,18 @@
 // Tester nombre de combinaison //
 #include <iostream>
 
-using namespace std;
-
 double fact(int a) {
-  int f = 1;
+  int f;
+
+  f = 1;
   
-  for (int i = 1; i <= a; ++i) {
+  for (int i = 1; i <= a; ++i)
     f = f * i;
-  }
   
   return f;
 }
 
-int combi_func(int n, int p) {
+int combinFunc(int n, int p) {
   int res;
   
   res = fact(n) / (fact(p) * fact(n - p));
@@ -21,26 +20,27 @@ int combi_func(int n, int p) {
   return res;
 }
 
-void combi_proc(int n, int p, int &res) {
+void combinProc(int n, int p, int &res) {
   res = fact(n) / (fact(p) * fact(n - p));
 }
 
-int main() {
+int main()
+{
   int a;
   int b;
   int c;
   
-  cout << "Donne moi une valeur : ";
-  cin >> a;
-  cout << "Donne moi une autre valeur : ";
-  cin >> b;
+  std::cout << "Donne moi une valeur : " << std::flush;
+  std::cin >> a;
+  std::cout << "Donne moi une autre valeur : " << std::flush;
+  std::cin >> b;
   
   // Utilisant fonction
-  cout << "Utilisant fonction : " << combi_func(a, b) << endl;
+  std::cout << "Utilisant fonction : " << combinFunc(a, b) << std::endl;
   
-  // Utiliant procŽdure
-  combi_proc(a, b, c);
-  cout << "Utilisant procŽdure : " << c << endl;
+  // Utiliant procÃ©dure
+  combinProc(a, b, c);
+  std::cout << "Utilisant procÃ©dure : " << c << std::endl;
   
   return 0;
 }

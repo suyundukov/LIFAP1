@@ -3,8 +3,6 @@
 #include <ctime> // Contient la fonction srand()
 #include <iostream>
 
-using namespace std;
-
 /* Fonction */
 
 int ran_val()
@@ -22,7 +20,7 @@ int ran_val()
 
 int main()
 {
-  cout << ran_val() << endl;
+  std::cout << ran_val() << std::endl;
 
   return 0;
 }

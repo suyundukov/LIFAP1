@@ -1,19 +1,17 @@
 /* Afficher la table de multiplication d’un entier choisi par USER */
 #include <iostream>
 
-using namespace std;
-
 int main()
 {
   int a;
 
-  cout << "Donne moi un chiffre : ";
-  cin >> a;
+  std::cout << "Donne moi un chiffre : " << std::flush;
+  std::cin >> a;
 
   for (int i = 1; i < 11 ; ++i) {
-    cout << a << " * " << i << " = " << a*i;
+    std::cout << a << " * " << i << " = " << a * i << std::flush;
   }
   
-  cout << endl;
+  std::cout << std::endl;
   return 0;
 }

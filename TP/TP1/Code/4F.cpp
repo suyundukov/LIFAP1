@@ -1,38 +1,35 @@
 /* Programmer une calculatrice proposant les opérations classiques */
 #include <iostream>
 
-using namespace std;
-
 int main()
 {
   int a;
   int b;
   char c;
   
-  cout << "Saisi une valeur : ";
-  cin >> a;
-  cout << "Saisi une deuxième valeur : ";
-  cin >> b;
-  cout << "Choisi un operateur parmi : '+' , '-' , '*' et '/' ";
-  cin >> c;
+  std::cout << "Saisi une valeur : " << std::flush;
+  std::cin >> a;
+  std::cout << "Saisi une deuxième valeur : " << std::flush;
+  std::cin >> b;
+  std::cout << "Choisi un operateur parmi : '+' , '-' , '*' et '/' " << std::flush;
+  std::cin >> c;
   
   switch (c) {
   case '+':
-    cout << a << " + " << b << " = " << a + b;
+    std::cout << a << " + " << b << " = " << a + b << std::endl;
     break;
   case '-':
-    cout << a << " - " << b << " = " << a - b;
+    std::cout << a << " - " << b << " = " << a - b << std::endl;
     break;
   case '*':
-    cout << a << " * " << b << " = " << a * b;
+    std::cout << a << " * " << b << " = " << a * b << std::endl;
     break;
   case '/':
-    cout << a << " / " << b << " = " << a / b;
+    std::cout << a << " / " << b << " = " << a / b << std::endl;
     break;
   default:
-    cout << "Unknown error !";
+    std::cout << "Unknown error !" << std::endl;
   }
   
-  cout << endl;
   return 0;
 }

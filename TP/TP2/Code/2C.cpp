@@ -3,15 +3,13 @@
 #include <ctime> // Contient la fonction srand()
 #include <iostream>
 
-using namespace std;
-
 /* Fonction */
 
 int ran_val()
 {
   int a;
 
-  srand(time(NULL));
+  srand(static_cast<unsigned int>(time(NULL)));
 
   a = (rand() % 15) + 10;
 
@@ -20,7 +18,8 @@ int ran_val()
 
 /* Utilisation */
 
-int main() {
+int main()
+{
   int a;
   int b;
   int aleat;
@@ -29,15 +28,15 @@ int main() {
   aleat = ran_val();
 
   do {
-    cout << "Donne moi une valeur : ";
-    cin >> a;
+    std::cout << "Donne moi une valeur : " << std::flush;
+    std::cin >> a;
     ++b;
-  } while (((a < aleat) || (a > aleat)) && (b < 5));
+  } while (a != aleat && b < 5);
 
   if (a == aleat)
-    cout << "Gagné !";
+    std::cout << "Gagné !" << std::endl;
   else
-    cout << "Perdu (";
+    std::cout << "Perdu (" << std::endl;
 
   return 0;
 }

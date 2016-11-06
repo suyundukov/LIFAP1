@@ -2,32 +2,28 @@
 /* Procédure -> Afficher le tableau passé en paramètre */
 #include <iostream>
 
-using namespace std;
-
-const int TAILLE_LIGNE = 100;
-const int TAILLE_COLONNE = 100;
+const int SIZE = 100;
 
 /* Procédure 1 */
 
-void tabRemplir(int tab[TAILLE_LIGNE][TAILLE_COLONNE], int tL, int tC)
+void tabRemplir(int tab[SIZE][SIZE], int tL, int tC)
 {
-  for (int i = 0; i < tL; ++i) {
+  for (int i = 0; i < tL; ++i)
     for (int j = 0; j < tC; ++j) {
-      cout << "Donne moi une valeur pour tab[" << i << "][" << j << "] : ";
-      cin >> tab[i][j];
+      std::cout << "Donne moi une valeur pour tab[" << i
+                << "][" << j << "] : " << std::flush;
+      std::cin >> tab[i][j];
     }
-  }
 }
 
 /* Procédure 2 */
 
-void tabAffiche(int tab[TAILLE_LIGNE][TAILLE_COLONNE], int tL, int tC)
+void tabAffiche(int tab[SIZE][SIZE], int tL, int tC)
 {
   for (int i = 0; i < tL; ++i) {
-    for (int j = 0; j < tC; ++j) {
-      cout << tab[i][j] << "\t";
-    }
-    cout << endl;
+    for (int j = 0; j < tC; ++j)
+      std::cout << tab[i][j] << "\t" << std::flush;
+    std::cout << std::endl;
   }
 }
 
@@ -37,12 +33,12 @@ int main()
 {
   int tC;
   int tL;
-  int tab[TAILLE_LIGNE][TAILLE_COLONNE] = {};
+  int tab[SIZE][SIZE] = {};
   
-  cout << "Donne moi le nombre de ligne : ";
-  cin >> tL;
-  cout << "Donne moi le nombre de colonne : ";
-  cin >> tC;
+  std::cout << "Donne moi le nombre de ligne : " << std::flush;
+  std::cin >> tL;
+  std::cout << "Donne moi le nombre de colonne : " << std::flush;
+  std::cin >> tC;
   
   tabRemplir(tab, tL, tC);
   

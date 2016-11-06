@@ -2,8 +2,6 @@
 #include <cmath> // Contient la fonction pow()
 #include <iostream>
 
-using namespace std;
-
 /* Fonction */
 
 int somme(int a)
@@ -12,9 +10,9 @@ int somme(int a)
 
   sum = 0;
 
-  for (int i = 0; i < a; ++i) {
+  for (int i = 0; i < a; ++i)
     sum += pow(2, i);
-  }
+
   return sum;
 }
 
@@ -24,11 +22,11 @@ int main()
 {
   int n;
 
-  cout << "Donne moi une valeur : ";
-  cin >> n;
+  std::cout << "Donne moi une valeur : " << std::flush;
+  std::cin >> n;
 
-  cout << "La somme de " << n << " premiers puissance de 2 est " << somme(n);
+  std::cout << "La somme de " << n << " premiers puissance de 2 est " 
+            << somme(n) << std::endl;
 
-  cout << endl;
   return 0;
 }
