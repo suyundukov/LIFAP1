@@ -31,22 +31,22 @@ Courses
   - [Sujet](TD/TD1/TD1.pdf)
   - [Corrigé](TD/TD1/TD1-cor.pdf)
   - [Source Code](TD/TD1/Code)
-    - [Python](TD/TD1/Code/Python) :snake:
+    - [Python](TD/TD1/Code/Python) 🐍
 - [TD2 : Algorithmes plus évolués](TD/TD2/)
   - [Sujet](TD/TD2/TD.pdf)
   - [Corrigé](TD/TD2/TD-cor.pdf)
   - [Source Code](TD/TD2/Code)
-    - [Python](TD/TD2/Code/Python) :snake:
+    - [Python](TD/TD2/Code/Python) 🐍
 - [TD3 : Fonctions et procédures](TD/TD3/)
   - [Sujet](TD/TD3/TD3.pdf)
   - [Corrigé](TD/TD3/TD3-cor.pdf)
   - [Source Code](TD/TD3/Code)
-    - [Python](TD/TD3/Code/Python) :snake:
+    - [Python](TD/TD3/Code/Python) 🐍
 - [TD4 : Passage de paramètres](TD/TD4/)
   - [Sujet](TD/TD4/TD4.pdf)
   - [Corrigé](TD/TD4/TD4-cor.pdf)
   - [Source Code](TD/TD4/Code)
-    - [Python](TD/TD4/Code/Python) :snake:
+    - [Python](TD/TD4/Code/Python) 🐍
 - [TD5 : GrAPiC](TD/TD5/)
   - [Sujet](TD/TD5/TD5.pdf)
   - [Corrigé](TD/TD5/TD5-cor.pdf)
@@ -55,12 +55,12 @@ Courses
   - [Sujet](TD/TD6/TD6.pdf)
   - [Corrigé](TD/TD6/TD6-cor.pdf)
   - [Source Code](TD/TD6/Code)
-    - [Python](TD/TD6/Code/Python) :snake:
+    - [Python](TD/TD6/Code/Python) 🐍
 - [TD7 : Tableaux à deux dimensions](TD/TD7/)
   - [Sujet](TD/TD7/TD7.pdf)
   - [Corrigé](TD/TD7/TD7-cor.pdf)
   - [Source Code](TD/TD7/Code)
-    - [Python](TD/TD7/Code/Python) :snake:
+    - [Python](TD/TD7/Code/Python) 🐍
 - [TD8 : Chaines de caractères](TD/TD8/)
   - [Sujet](TD/TD8/TD8.pdf)
   - [Corrigé](TD/TD8/TD8-cor.pdf)
@@ -68,7 +68,7 @@ Courses
 - [TD9 : Les structures](TD/TD9/)
   - [Sujet](TD/TD9/TD9.pdf)
   - [Corrigé](TD/TD9/TD9-cor.pdf)
-  - [Source Code](TD/TD9/Code) :x:
+  - [Source Code](TD/TD9/Code)
 - [TD10 : Chaines de caractères (suite)](TD/TD10/)
   - [Sujet](TD/TD10/TD10.pdf)
   - [Corrigé](TD/TD10/TD10-cor.pdf)
@@ -80,7 +80,7 @@ Courses
 - [TD12 : Révisions](TD/TD12/)
   - [Sujet](TD/TD12/TD12.pdf)
   - Corrigé[](TD/TD12/TD12-cor.pdf)
-  - [Source Code](TD/TD12/Code) :x:
+  - [Source Code](TD/TD12/Code) ❌
 
 ### TP
 
@@ -88,12 +88,12 @@ Courses
   - [Sujet](TP/TP1/TP1.pdf)
   - [Corrigé](TP/TP1/TP1-cor.pdf)
   - [Source Code](TP/TP1/Code)
-    - [Python](TP/TP1/Code/Python) :snake:
+    - [Python](TP/TP1/Code/Python) 🐍
 - [TP2 : Fonctions et procédures](TP/TP2)
   - [Sujet](TP/TP2/TP2.pdf)
   - [Corrigé](TP/TP2/TP2-cor.pdf)
   - [Source Code](TP/TP2/Code)
-    - [Python](TP/TP2/Code/Python) :snake:
+    - [Python](TP/TP2/Code/Python) 🐍
 - [TP3 : Passage de paramètres / GRAPIC](TP/TP3)
   - [Sujet](TP/TP3/TP3.pdf)
   - [Corrigé](TP/TP3/TP3-cor.pdf)
@@ -121,10 +121,11 @@ Courses
 - [TP9 : Démineur](TP/TP9)
   - [Sujet](TP/TP9/TP9.pdf)
   - Corrigé[](TP/TP9/TP9-cor.pdf)
-  - [Source Code](TP/TP9/Code) :bomb:
+  - [Source Code](TP/TP9/Code) 💣
 
 ## Links
 
+- [LIFAP1][1]
 - [GrAPiC][2]
 - [sunlib.hpp][3]
 
@@ -137,10 +138,10 @@ int combin(int n, int p); // Combination Function
 
 ## FIXME
 
-- TD9 : [P1.cpp](TD/TD7/Code/P1.cpp) `Code`
 - TD12 : [123456.cpp](TD/TD12/Code/123456.cpp) `Rewrite the code`
 
 
 
+[1]: http://perso.univ-lyon1.fr/elodie.desseree/LIFAP1/
 [2]: http://liris.cnrs.fr/alexandre.meyer/grapic/html/index.html
 [3]: https://git.io/vXZXX
