@@ -1,9 +1,11 @@
-/* 1.           -> Déclarer un tableau de chaîne de caractère */
-/* 2. Procédure -> Initialiser la grille avec des "*" */
-/* 3. Procédure -> Inserer la chaine de caractères qui est demandé à USER */
-/* 4. Procédure -> Afficher le contenu d'une case, demandé à USER */
-/* 5. Fonction  -> Renvoyer 0 si la case 1 et la case 2 sont identiques */
-/* 6.           -> Simuler le jeu de MEMORY à deux joueurs */
+/**
+ * 1.           -> Déclarer un tableau de chaîne de caractère
+ * 2. Procédure -> Initialiser la grille avec des "*"
+ * 3. Procédure -> Inserer la chaine de caractères qui est demandé à USER
+ * 4. Procédure -> Afficher le contenu d'une case, demandé à USER
+ * 5. Fonction  -> Renvoyer 0 si la case 1 et la case 2 sont identiques
+ * 6.           -> Simuler le jeu de MEMORY à deux joueurs
+ */
 #include <ctime>
 #include <cstdlib>
 #include <cstring>
@@ -15,11 +17,9 @@ const int sizeG = 2;
 
 void initGrille(char tab[sizeG][sizeG][15])
 {
-  for (int i = 0; i < sizeG; ++i) {
-    for (int j = 0; j < sizeG; ++j) {
+  for (int i = 0; i < sizeG; ++i)
+    for (int j = 0; j < sizeG; ++j)
       strcpy(tab[i][j], "*");
-    }
-  }
 }
 
 /* Procédure 2 */
@@ -30,7 +30,7 @@ void remplirGrille(char tab[sizeG][sizeG][15])
   int rJ;
   char temp[15];
   
-  srand(time(NULL));
+  srand(static_cast<unsigned int>(time(NULL)));
   
   for (int i = 0; i < ((sizeG * sizeG) / 2); ++i) {
     std::cout << "Donne moi une chaîne : " << std::flush;

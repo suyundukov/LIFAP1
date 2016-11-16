@@ -1,4 +1,6 @@
-/* Effectuer la symétrie verticale d'une image */
+/**
+ * Effectuer la symétrie verticale d'une image
+ */
 #include "myimage.hpp"
 #include <iostream>
 
@@ -8,11 +10,9 @@ MyImage miroirImage(MyImage im1)
 {
   MyImage im2;
   
-  for (int i = 0; i < im1.sizeV; ++i) {
-    for (int j = 0; j < im1.sizeH; ++j) {
+  for (int i = 0; i < im1.sizeV; ++i)
+    for (int j = 0; j < im1.sizeH / 2; ++j)
       im2.couleur[i][j] = im1.couleur[i][im1.sizeH - 1 - j];
-    }
-  }
   
   return im2;
 }

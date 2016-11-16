@@ -1,4 +1,6 @@
-/* Remplir un tableau de notes, quantité des notes est demandée à USER */
+/**
+ * Remplir un tableau de notes, quantité des notes est demandée à USER
+ */
 #include <iostream>
 
 /* Procédure */
@@ -21,5 +23,6 @@ int main()
   remplirTableau(tab, 5);
   
   std::cout << std::endl;
+
   return 0;
 }

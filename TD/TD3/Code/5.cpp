@@ -1,4 +1,6 @@
-/* Calculer la somme des N premiers entiers */
+/**
+ * Calculer la somme des N premiers entiers
+ */
 #include <iostream>
 
 int calcSomme(int a)
@@ -7,10 +9,9 @@ int calcSomme(int a)
 
   b = 0;
 
-  for (int i = 0; i <= a; ++i) {
+  for (int i = 0; i <= a; ++i)
     b += i;
-  }
-  
+
   // On peut utiliser une autre méthode plus facile //
   // sans boucle POUR , c'est d'utiliser la formule //
   //            b = a * (a + 1) / 2                 //
@@ -23,12 +24,14 @@ int calcSomme(int a)
 int main()
 {
   int a;
-  
+
   std::cout << "Donne moi une valeur : " << std::flush;
   std::cin >> a;
-  
-  std::cout << "La somme de " << a << " premiers entiers est : " << calcSomme(a);
-  
+
+  std::cout << "La somme de " << a << " premiers entiers est : "
+            << calcSomme(a);
+
   std::cout << std::endl;
+
   return 0;
 }

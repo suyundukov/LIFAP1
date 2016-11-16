@@ -1,5 +1,7 @@
-/* Renverser le contenu d'un tableau contenant des caractères */
-/* Ex: | A | B | C | D | E | -> | E | D | C | B | A | */
+/**
+ * Renverser le contenu d'un tableau contenant des caractères
+ * Ex: | A | B | C | D | E | -> | E | D | C | B | A |
+ */
 #include <cstring>
 #include <iostream>
 

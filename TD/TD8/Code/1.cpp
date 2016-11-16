@@ -1,4 +1,6 @@
-/* Retourner le nombre de caractères dans une chaine */
+/**
+ * Retourner le nombre de caractères dans une chaine
+ */
 #include <iostream>
 
 /* Fonction */
@@ -9,9 +11,8 @@ int nombreCar(char c[])
   
   i = 0;
   
-  while (c[i] != '\0') {
+  while (c[i] != '\0')
     ++i;
-  }
   
   return i;
 }
@@ -23,5 +24,6 @@ int main()
   char mot[] = "bonjour";
   
   std::cout << nombreCar(mot) << std::endl;
+
   return 0;
 }

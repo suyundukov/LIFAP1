@@ -1,4 +1,6 @@
-/* Retourner la moyenne de deux réels A et B donnée en paramètres */
+/**
+ * Retourner la moyenne de deux réels A et B donnée en paramètres
+ */
 #include <iostream>
 
 float retour(float a, float b)

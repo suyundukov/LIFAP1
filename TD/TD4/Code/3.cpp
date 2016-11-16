@@ -1,9 +1,11 @@
-/* Effectuer la division euclidienne de deux entiers */
+/**
+ * Effectuer la division euclidienne de deux entiers
+ */
 #include <iostream>
 
 /* Procédure */
 
-void divisEuclid(int a, int b, int &q, int &r)
+void divisEuclid(int a, int b, int& q, int& r)
 {
   q = 0;
   r = a;

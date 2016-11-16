@@ -1,17 +1,16 @@
-/* 1. Procédure -> Afficher le tableau ligne par ligne */
-/* 2. Procédure -> Afficher le tableau colonne par colonne */
+/**
+ * 1. Procédure -> Afficher le tableau ligne par ligne
+ * 2. Procédure -> Afficher le tableau colonne par colonne
+ */
 #include <iostream>
-
-using namespace std;
 
 /* Procédure 1 */
 
 void affParLigne(float tab[5][5])
 {
   for (int i = 0; i < 5; ++i) {
-    for (int j = 0; j < 5; ++j) {
+    for (int j = 0; j < 5; ++j)
       std::cout << tab[i][j] << " " << std::flush;
-    }
     std::cout << std::endl;
   }
 }
@@ -21,9 +20,8 @@ void affParLigne(float tab[5][5])
 void affParColonne(float tab[5][5])
 {
   for (int i = 0; i < 5; ++i) {
-    for (int j = 0; j < 5; ++j) {
+    for (int j = 0; j < 5; ++j)
       std::cout << tab[j][i] << " " << std::flush;
-    }
     std::cout << std::endl;
   }
 }

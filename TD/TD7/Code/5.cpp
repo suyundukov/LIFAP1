@@ -1,21 +1,21 @@
-/* Retourner la plus grand valeur de tableau, et ses indice */
+/**
+ * Retourner la plus grand valeur de tableau, et ses indice
+ */
 #include <iostream>
 
 /* Procédure */
 
-void recherchePlusGrand(float tab[5][5], float &max, int &row, int &col)
+void recherchePlusGrand(float tab[5][5], float& max, int& row, int& col)
 {
   max = tab[0][0];
 
-  for (int i = 0; i < 5; ++i) {
-    for (int j = 0; j < 5; ++j) {
+  for (int i = 0; i < 5; ++i)
+    for (int j = 0; j < 5; ++j)
       if (tab[i][j] > max) {
         max = tab[i][j];
         row = i;
         col = j;
       }
-    }
-  }
 }
 
 /* Utilisation */

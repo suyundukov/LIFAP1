@@ -1,11 +1,11 @@
-/*============================================================================*/
-/* 1.           -> Définir les structure de données nécessaires
+/**
+ * 1.           -> Définir les structure de données nécessaires
  * 2. Procédure -> Saisir les données de structure VOYAGE
  * 3. Procédure -> Ajouter un voyage dans le tableau
  * 4. Procédure -> Revoyer la moyenne des notes par continent
  * 5. Procédure -> Renvoyer l'indice du meilleur et pire continent
- * 6. Programme principal */
-/*============================================================================*/
+ * 6. Programme principal
+ */
 #include <iostream>
 
 const short MAX = 20;
@@ -22,7 +22,7 @@ struct TousLesVoyages {
   Voyage tab[MAX];
 };
 
-void remplirVoyage(Voyage &voy)
+void remplirVoyage(Voyage& voy)
 {
   std::cout << "Donne moi la destination : " << std::flush;
   std::cin >> voy.dest;
@@ -41,13 +41,13 @@ void remplirVoyage(Voyage &voy)
   voy.cont -= 1;
 }
 
-void ajouteVoyage(TousLesVoyages &tVoy)
+void ajouteVoyage(TousLesVoyages& tVoy)
 {
   remplirVoyage(tVoy.tab[tVoy.nmbr]);
   tVoy.nmbr += 1;
 }
 
-void moyenneParContinent(TousLesVoyages &tVoy, double tabMoy[5] = 0)
+void moyenneParContinent(TousLesVoyages& tVoy, double tabMoy[5] = 0)
 {
   int tabInd[5] = {0};
   
@@ -79,12 +79,11 @@ void moyenneParContinent(TousLesVoyages &tVoy, double tabMoy[5] = 0)
     }
   }
   
-  for (int i = 0; i < 5; ++i) {
+  for (int i = 0; i < 5; ++i)
     tabMoy[i] /= tabInd[i];
-  }
 }
 
-void leMieuxEtLePire(TousLesVoyages tVoy, int &mieux, int &pire)
+void leMieuxEtLePire(TousLesVoyages tVoy, int& mieux, int& pire)
 {
   double tabMoy[5];
   int good;

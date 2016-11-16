@@ -1,16 +1,16 @@
-/* Dessiner le motif donné */
+/**
+ * Dessiner le motif donné
+ */
 #include <iostream>
 
 void dessin(int lngr, int rep)
 {
-  for (int i = 0; i < rep; ++i) {
+  for (int i = 0; i < rep; ++i)
     for (int j = 1; j <= lngr; ++j) {
-      for (int k = 0; k < j; ++k) {
+      for (int k = 0; k < j; ++k)
         std::cout << "*" << std::flush;
-      }
       std::cout << std::endl;
     }
-  }
 }
 
 int main()

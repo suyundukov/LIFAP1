@@ -1,4 +1,6 @@
-/* Calculer la moyenne de N valeurs saisie par USER */
+/**
+ * Calculer la moyenne de N valeurs saisie par USER
+ */
 #include <iostream>
 
 int main()
@@ -6,7 +8,7 @@ int main()
   int a;
   int b;
   int c;
- 
+
   c = 0;
 
   std::cout << "Donne moi le nombre de valeurs : " << std::flush;

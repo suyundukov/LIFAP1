@@ -1,4 +1,6 @@
-/* emander à USER une valeur entre 0 et 20, la retourner après */
+/**
+ * Demander à USER une valeur entre 0 et 20, la retourner après
+ */
 #include <iostream>
 
 int retour()

@@ -1,4 +1,6 @@
-/* Retourner le nombre d'occurence d'une lettre dans une chaîne */
+/**
+ * Retourner le nombre d'occurence d'une lettre dans une chaîne
+ */
 #include <iostream>
 
 /* Fonction */
@@ -9,10 +11,9 @@ int occurence(char c[], char c1)
   
   o = 0;
   
-  for (int i = 0; c[i] != '\0'; ++i) {
+  for (int i = 0; c[i] != '\0'; ++i)
     if (c[i] == c1)
       o += 1;
-  }
   
   return o;
 }
@@ -24,5 +25,6 @@ int main()
   char mot[] = "bonjour";
   
   std::cout << occurence(mot, 'z') << std::endl;
+
   return 0;
 }

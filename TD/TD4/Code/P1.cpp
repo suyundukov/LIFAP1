@@ -1,10 +1,12 @@
-/* Calculer et retourner si existent les racines d'un polynôme du 2 degré */
+/**
+ * Calculer et retourner si existent les racines d'un polynôme du 2 degré
+ */
 #include <cmath>
 #include <iostream>
 
 /* Procédure */
 
-void racine(float a, float b, float c, float &x1, float &x2)
+void racine(float a, float b, float c, float& x1, float& x2)
 {
   float d;
   
@@ -26,9 +28,10 @@ int main()
 {
   float x1;
   float x2;
-  
+
   racine(3, 5, 7, x1, x2);
-  
+
   std::cout << "x1 = " << x1 << "\n" << "x2 = " << x2 << std::endl;
+
   return 0;
 }

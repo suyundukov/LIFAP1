@@ -1,4 +1,6 @@
-/* Retourner la chaîne équivalente en majuscule */
+/**
+ * Retourner la chaîne équivalente en majuscule
+ */
 #include <iostream>
 
 /* Procédure */
@@ -23,5 +25,6 @@ int main()
   minToMaj(c, c1);
   
   std::cout << c1 << std::endl;
+
   return 0;
 }

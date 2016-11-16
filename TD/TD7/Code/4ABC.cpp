@@ -1,6 +1,8 @@
-/* 1. Fonction -> Calculer la somme d'une ligne */
-/* 2. Fonction -> Calculer la somme d'une colonne */
-/* 3. Fonction -> Calculer la somme de deux diagonales */
+/**
+ * 1. Fonction -> Calculer la somme d'une ligne
+ * 2. Fonction -> Calculer la somme d'une colonne
+ * 3. Fonction -> Calculer la somme de deux diagonales
+ */
 #include <iostream>
 
 /* Fonction 1 */
@@ -11,9 +13,8 @@ float sommeLigne(float tab[5][5], int n)
   
   som = 0;
   
-  for (int i = 0; i < 5; ++i) {
+  for (int i = 0; i < 5; ++i)
     som += tab[n][i];
-  }
   
   return som;
 }
@@ -26,16 +27,15 @@ float sommeColonne(float tab[5][5], int n)
   
   som = 0;
   
-  for (int i = 0; i < 5; ++i) {
+  for (int i = 0; i < 5; ++i)
     som += tab[i][n];
-  }
   
   return som;
 }
 
 /* Fonction 3 */
 
-float sommeDiagonale(float tab[5][5], int n, int &som1)
+float sommeDiagonale(float tab[5][5], int n, int& som1)
 {
   int som;
   

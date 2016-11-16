@@ -1,6 +1,8 @@
-/* 1. Fonction -> Retourner le perimetre d'un cercle */
-/* 2. Fonction -> Retourner l'aire d'un cercle       */
-/* 3. Sous-programme -> Utliser ces deux fonction    */
+/**
+ * 1. Fonction -> Retourner le perimetre d'un cercle
+ * 2. Fonction -> Retourner l'aire d'un cercle
+ * 3. Sous-programme -> Utliser ces deux fonction
+ */
 #include <iostream>
 
 /* Fonction 1 */

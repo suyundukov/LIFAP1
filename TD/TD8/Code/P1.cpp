@@ -1,4 +1,6 @@
-/* Effectuer le codage de césar */
+/**
+ * Effectuer le codage de césar
+ */
 #include <iostream>
 
 /* Procédure */

@@ -1,4 +1,6 @@
-/* Remplir deuxième tableau avec la somme des colonnes du 1ère tableau */
+/**
+ * Remplir deuxième tableau avec la somme des colonnes du 1ère tableau
+ */
 #include <iostream>
 
 /* Procédure */
@@ -9,9 +11,10 @@ void remplirTab(float tab[6][6], float tab1[6], int c, int l)
   
   for (int i = 0; i < l; ++i) {
     som = 0;
-    for (int j = 0; j < c; ++j) {
+
+    for (int j = 0; j < c; ++j)
       som += tab[j][i];
-    }
+
     tab1[i] = som;
   }
 }

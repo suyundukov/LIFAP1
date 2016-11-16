@@ -1,11 +1,14 @@
-/* Effectuer la permutation de trois variables */
+/**
+ * Effectuer la permutation de trois variables
+ */
 #include <iostream>
 
 /* Procédure */
 
-void permut(int &a, int &b, int &c)
+void permut(int& a, int& b, int& c)
 {
   int temp;
+
   temp = b;
   b = a;
   a = c;

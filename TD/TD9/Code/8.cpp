@@ -1,4 +1,6 @@
-/* Retourner une nouvelle image, calculée comme la somme de deux images */
+/**
+ * Retourner une nouvelle image, calculée comme la somme de deux images
+ */
 #include "myimage.hpp"
 #include <iostream>
 
@@ -7,15 +9,16 @@
 MyImage sommeImage(MyImage im1, MyImage im2)
 {
   MyImage im3;
+
+  im3 = im1;
   
-  for (int i = 0; i < im1.sizeV; ++i) {
+  for (int i = 0; i < im1.sizeV; ++i)
     for (int j = 0; j < im1.sizeH; ++j) {
-      if (im1.couleur[i][j] + im2.couleur[i][j] >= 255)
+      if (im3.couleur[i][j] + im2.couleur[i][j] >= 255)
         im3.couleur[i][j] = 255;
       else
-        im3.couleur[i][j] = im1.couleur[i][j] + im2.couleur[i][j];
+        im3.couleur[i][j] += im2.couleur[i][j];
     }
-  }
   
   return im3;
 }

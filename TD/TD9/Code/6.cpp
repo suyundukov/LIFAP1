@@ -1,4 +1,6 @@
-/* Effectuer le seuillage d'une image */
+/**
+ * Effectuer le seuillage d'une image
+ */
 #include <iostream>
 #include "myimage.hpp"
 
@@ -6,14 +8,13 @@
 
 void seuillage(MyImage &im1, int n)
 {
-  for (int i = 0; i < im1.sizeV; ++i) {
+  for (int i = 0; i < im1.sizeV; ++i)
     for (int j = 0; j < im1.sizeH; ++j) {
       if (im1.couleur[i][j] < n)
         im1.couleur[i][j] = 0;
       else
         im1.couleur[i][j] = 255;
     }
-  }
 }
 
 /* Utilisation */

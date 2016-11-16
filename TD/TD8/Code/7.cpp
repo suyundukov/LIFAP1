@@ -1,4 +1,6 @@
-/* Retourner une nouvelle chaîne de caractère sans voyelles */
+/**
+ * Retourner une nouvelle chaîne de caractère sans voyelles
+ */
 #include <iostream>
 
 /* Procédure */
@@ -9,7 +11,7 @@ void sansVoyelle(char c[], char c1[])
   
   j = 0;
   
-  for (int i = 0; c[i] != '\0'; ++i) {
+  for (int i = 0; c[i] != '\0'; ++i)
     if ( c[i] != 'a' && c[i] != 'e' && c[i] != 'i' &&
          c[i] != 'o' && c[i] != 'u' && c[i] != 'y' &&
          c[i] != 'A' && c[i] != 'E' && c[i] != 'I' &&
@@ -17,7 +19,6 @@ void sansVoyelle(char c[], char c1[])
       c1[j] = c[i];
       ++j;
     }
-  }
 }
 
 /* Utilisation */

@@ -1,4 +1,6 @@
-/* Calculer et afficher le carré de nombre demandé à USER */
+/**
+ * Calculer et afficher le carré de nombre demandé à USER
+ */
 #include <iostream>
 
 int main()

@@ -1,4 +1,6 @@
-/* Simuler le fonctionnement d'une calculatrice simple */
+/**
+ * Simuler le fonctionnement d'une calculatrice simple
+ */
 #include <iostream>
 
 int main()
@@ -25,11 +27,10 @@ int main()
     std::cout << a << " * " << b << " = " << a * b << std::endl;
     break;
   case '/':
-    if (b == 0) {
+    if (b == 0)
       std::cout << "Operation impossible !" << std::endl;
-    } else {
+    else
       std::cout << a << " / " << b << " = " << a / b << std::endl;
-    }
     break;
   default:
     std::cout << "Unknown error !" << std::endl;;

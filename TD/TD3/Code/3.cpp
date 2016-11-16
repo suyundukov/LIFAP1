@@ -1,4 +1,6 @@
-/* Afficher les dix nombres suivants la valeur N donnée en paramètre */
+/**
+ * Afficher les dix nombres suivants la valeur N donnée en paramètre
+ */
 #include <iostream>
 
 void affiche(int a)

@@ -1,4 +1,6 @@
-/* Demander un entier entre les bornes imposées */
+/**
+ * Demander un entier entre les bornes imposées
+ */
 #include <iostream>
 
 int main()
@@ -14,5 +16,6 @@ int main()
   }
 
   std::cout << "Tout est OK !" << std::endl;
+
   return 0;
 }

@@ -1,15 +1,16 @@
-/* Calculer le nombre de combinaison de P éléments pour un ensemble de N */
+/**
+ * Calculer le nombre de combinaison de P éléments pour un ensemble de N
+ */
 #include <iostream>
 
 /* Fontion de factorielle */
 
 int fact(int n)
 {
-  if (n == 0) {
+  if (n == 0)
     return 1;
-  } else {
+  else
     return n * fact(n - 1);
-  }
 }
 
 /* Fonction */

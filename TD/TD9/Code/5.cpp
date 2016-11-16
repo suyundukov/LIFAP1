@@ -1,4 +1,6 @@
-/* Procédure -> Extraire le niveau du gris maximum, minimum et moyen */
+/**
+ * Procédure -> Extraire le niveau du gris maximum, minimum et moyen
+ */
 #include "myimage.hpp"
 #include <iostream>
 

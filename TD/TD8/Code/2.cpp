@@ -1,4 +1,6 @@
-/* Afficher une chaîne de caractère, en affichant un caractère par ligne */
+/**
+ * Afficher une chaîne de caractère, en affichant un caractère par ligne
+ */
 #include <iostream>
 
 /* Procédure */

@@ -1,4 +1,6 @@
-/* Calculer les rastd::cines rééles d'un polymer du second degré */
+/**
+ * Calculer les rastd::cines rééles d'un polymer du second degré
+ */
 #include <cmath> // Contient la fonction sqrt()
 #include <iostream>
 
@@ -14,14 +16,13 @@ int main()
 
   d = b * b - 4 * a * c;
 
-  if (d < 0) {
+  if (d < 0)
     std::cout << "Pas de racines réelles" << std::endl;
-  } else if (d == 0) {
+  else if (d == 0)
     std::cout << "Une racine double : " << -b / (2 * a) << std::endl;
-  } else {
+  else
     std::cout << (-b + sqrt(d)) / (2 * a) << " " 
         << (-b - sqrt(d)) / (2 * a) << std::endl;
-  }
 
   return 0;
 }

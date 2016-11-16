@@ -18,12 +18,11 @@ struct CaseGrille {
 // Initialisation de grille de jeu
 void initGrille(CaseGrille tab[SIZE][SIZE])
 {
-  for (int i = 0; i < SIZE; ++i) {
+  for (int i = 0; i < SIZE; ++i)
     for (int j = 0; j < SIZE; ++j) {
       tab[i][j].contenu = 0;
       tab[i][j].estDecouverte = false;
     }
-  }
 }
 
 // Position des bombes
@@ -46,18 +45,13 @@ void poserBombe(CaseGrille tab[SIZE][SIZE])
 // Comptage de mines / Si la case a une bombe 'case++'
 void compterMines(CaseGrille tab[SIZE][SIZE])
 {
-  for (int i = 0; i < SIZE; ++i) {
-    for (int j = 0; j < SIZE; ++j) {
-      if (tab[i][j].contenu != -1) {
-        for (int k = (i - 1 < 0) ? 0 : i - 1; k <= i + 1 && k != SIZE; ++k) {
-          for (int m = (j - 1 < 0) ? 0 : j - 1; m <= j + 1 && m != SIZE; ++m) {
+  for (int i = 0; i < SIZE; ++i)
+    for (int j = 0; j < SIZE; ++j)
+      if (tab[i][j].contenu != -1)
+        for (int k = (i - 1 < 0) ? 0 : i - 1; k <= i + 1 && k != SIZE; ++k)
+          for (int m = (j - 1 < 0) ? 0 : j - 1; m <= j + 1 && m != SIZE; ++m)
             if (tab[k][m].contenu == -1)
               tab[i][j].contenu += 1;
-          }
-        }
-      }
-    }
-  }
 }
 
 // Affichage de la grille
@@ -65,14 +59,13 @@ void afficherGrille(CaseGrille tab[SIZE][SIZE])
 {
   // Affichage de ligne avec les chiffre
   std::cout << " " << std::flush; // Pour un petit décallage
-  for (int i = 0; i < SIZE; ++i) {
+  for (int i = 0; i < SIZE; ++i)
     std::cout << " " << i << std::flush;
-  }
   std::cout << std::endl;
   // Affichage de reste de la grille
   for (int i = 0; i < SIZE; ++i) {
     std::cout << i << std::flush;
-    for (int j = 0; j < SIZE; ++j) {
+    for (int j = 0; j < SIZE; ++j)
       if (tab[i][j].estDecouverte == true) {
         if (tab[i][j].contenu == -1) {
           std::cout << " X" << std::flush;
@@ -82,7 +75,6 @@ void afficherGrille(CaseGrille tab[SIZE][SIZE])
       } else {
         std::cout << " -" << std::flush;
       }
-    }
     std::cout << std::endl;
   }
 }
@@ -91,25 +83,23 @@ void afficherGrille(CaseGrille tab[SIZE][SIZE])
 void afficherGrilleEntiere(CaseGrille tab[SIZE][SIZE])
 {
   std::cout << " " << std::flush;
-  for (int i = 0; i < SIZE; ++i) {
+  for (int i = 0; i < SIZE; ++i)
     std::cout << " " << i << std::flush;
-  }
   std::cout << std::endl;
   for (int i = 0; i < SIZE; ++i) {
     std::cout << i << std::flush;
     for (int j = 0; j < SIZE; ++j) {
-      if (tab[i][j].contenu == -1) {
+      if (tab[i][j].contenu == -1)
         std::cout << " X" << std::flush;
-      } else {
+      else
       std::cout << " " << tab[i][j].contenu << std::flush;
-      }
     }
     std::cout << std::endl;
   }
 }
 
 // Saisi de choix par USER
-int decouvrirUneCase(CaseGrille tab[SIZE][SIZE], int &x, int &y)
+int decouvrirUneCase(CaseGrille tab[SIZE][SIZE], int& x, int& y)
 {
   int val;
   

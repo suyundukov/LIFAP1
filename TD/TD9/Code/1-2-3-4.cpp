@@ -1,7 +1,9 @@
-/* 1.           -> Déclarer deux constantes */
-/* 2.           -> Écrire une structure, pour pouvoir stocker une image */
-/* 3. Fonction  -> Rémplir la structure */
-/* 4. Procédure -> Afficher les valeurs des différents pixels */
+/**
+ * 1.           -> Déclarer deux constantes
+ * 2.           -> Écrire une structure, pour pouvoir stocker une image
+ * 3. Fonction  -> Rémplir la structure 
+ * 4. Procédure -> Afficher les valeurs des différents pixels
+ */
 #include <iostream>
 
 /* Déclaration des variables */
@@ -10,8 +12,7 @@ const int MAX_SIZE = 256;
 
 /* La structure de donnée permettant de stocker une image */
 
-struct MyImage
-{
+struct MyImage {
   int sizeV; // La hauteur de l'image
   int sizeH; // La largeur de l'image
   int couleur [MAX_SIZE][MAX_SIZE]; // Ici on stocke le niveau de gris
@@ -24,11 +25,9 @@ MyImage remplitImage(MyImage im1, int tX, int tY)
   im1.sizeV = tX;
   im1.sizeH = tY;
   
-  for (int i = 0; i < im1.sizeV; ++i) {
-    for (int j = 0; j < im1.sizeH; ++j) {
+  for (int i = 0; i < im1.sizeV; ++i)
+    for (int j = 0; j < im1.sizeH; ++j)
       std::cin >> im1.couleur[i][j];
-    }
-  }
   
   return im1;
 }
