@@ -1,9 +1,7 @@
-/* Premier programme en C++ */
 #include <iostream>
 
-int main()
-{
-  std::cout << "Hello, World !" << std::endl;
+using namespace std;
 
-  return 0;
+int main() {
+  cout << "Hello, Wordl !" << endl;
 }

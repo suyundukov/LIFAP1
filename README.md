@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://i1.sumaxi.me/i/lifap1.png">
+  <img src="https://i1.sumaxi.me/i/lifap1.svg" width="100%" height="300">
 </p>
 
 Table of Contents
@@ -139,6 +139,13 @@ int combin(int n, int p); // Combination Function
 ## FIXME
 
 - TD12 : [123456.cpp](TD/TD12/Code/123456.cpp) `Rewrite the code`
+
+## License
+
+<p align="center">
+  <a href="./LICENSE"><img src="https://i1.sumaxi.me/i/logo.svg" width="100%" height="128"></a>
+  <a href="./LICENSE"><strong>MIT</strong></a>
+</p>
 
 
 
