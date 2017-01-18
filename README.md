@@ -1,9 +1,8 @@
 <p align="center">
-  <img src="https://i1.sumaxi.me/i/lifap1.svg" width="100%" height="300">
+  <img src="https://i.nurlan.co/i/lifap1.svg" width="100%" height="300">
 </p>
 
-Table of Contents
------------------
+# Table of Contents
 
 - [CM](#cm)
 - [TD](#td)
@@ -11,8 +10,7 @@ Table of Contents
 - [Links](#links)
 - [FIXME](#fixme)
 
-Courses
--------
+# Courses
 
 ### CM
 
@@ -143,7 +141,7 @@ int combin(int n, int p); // Combination Function
 ## License
 
 <p align="center">
-  <a href="./LICENSE"><img src="https://i1.sumaxi.me/i/logo.svg" width="100%" height="128"></a>
+  <a href="./LICENSE"><img src="https://i.nurlan.co/i/logo.svg" width="100%" height="128"></a>
   <a href="./LICENSE"><strong>MIT</strong></a>
 </p>
 
