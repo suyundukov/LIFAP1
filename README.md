@@ -8,7 +8,7 @@
 - [TD](#td)
 - [TP](#tp)
 - [Links](#links)
-- [FIXME](#fixme)
+- [License](#license)
 
 # Courses
 
@@ -78,7 +78,7 @@
 - [TD12 : Révisions](TD/TD12/)
   - [Sujet](TD/TD12/TD12.pdf)
   - [Corrigé](TD/TD12/TD12-cor.pdf)
-  - [Source Code](TD/TD12/Code) ❌
+  - [Source Code](TD/TD12/Code)
 
 ### TP
 
@@ -133,10 +133,6 @@
 int fact(int n); // Factorial Function
 int combin(int n, int p); // Combination Function
   ```
-
-## FIXME
-
-- TD12 : [123456.cpp](TD/TD12/Code/123456.cpp) `Rewrite the code`
 
 ## License
 

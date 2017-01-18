@@ -9,10 +9,29 @@
 #include <iostream>
 
 const short MAX = 20;
+const short NB_CONT = 6;
+
+enum Continent {
+  Afrique = 0,
+  Amerique = 1,
+  Asie = 2,
+  Europe = 3,
+  Oceanie = 4,
+  Antartique = 5
+};
+
+char *libelle[] = {
+  "Afrique",
+  "Asie",
+  "Amerique",
+  "Europe",
+  "Oceanie",
+  "Antartique"
+};
 
 struct Voyage {
   char dest[20];
-  short cont;
+  Continent cont;
   short dur;
   short note;
 };
@@ -22,79 +41,71 @@ struct TousLesVoyages {
   Voyage tab[MAX];
 };
 
-void remplirVoyage(Voyage& voy)
-{
+Continent saisieContinent() {
+  int ind;
+
+  std::cout << "Choix du continent : " << std::endl;
+
+  for (int i = 0; i < NB_CONT; i++)
+    std::cout << i + 1 << ". " << libelle[i] << std::endl;
+
+  do {
+    std::cout << "Faut choisir (entre 1 et " << NB_CONT << ") ?"
+    << std::endl;
+    std::cin >> ind;
+  } while (ind <= 0 || ind > NB_CONT);
+
+  ind -= 1;
+
+  return (Continent) ind ;
+}
+
+void remplirVoyage(Voyage& voy) {
   std::cout << "Donne moi la destination : " << std::flush;
   std::cin >> voy.dest;
-  do {
-    std::cout << "Choisi parmi les possibilités suivants : " << std::endl;
-    std::cout << "1. Afrique\n" << "2. Amérique\n" << "3. Asie\n" << "4. Europe\n"
-         << "5. Océanie" << std::endl;
-    std::cin >> voy.cont;
-  } while (voy.cont < 1 && voy.cont > 5);
+  voy.cont = saisieContinent();
   std::cout << "Donne moi la durée : " << std::flush;
   std::cin >> voy.dur;
   std::cout << "Donne moi la note : " << std::flush;
   std::cin >> voy.note;
-  
-  // Pour faciliter le travail avec le tableau d'après
-  voy.cont -= 1;
 }
 
-void ajouteVoyage(TousLesVoyages& tVoy)
-{
+void ajouteVoyage(TousLesVoyages& tVoy) {
+  if (tVoy.nmbr >= MAX - 1) {
+    std::cout << "Plus possible d'ajouter un voyage-quota de l'annee epuise"
+    << std::endl;
+    return ;
+  }
   remplirVoyage(tVoy.tab[tVoy.nmbr]);
   tVoy.nmbr += 1;
 }
 
-void moyenneParContinent(TousLesVoyages& tVoy, double tabMoy[5] = 0)
-{
-  int tabInd[5] = {0};
-  
-  //FIXME: Réécrire le code
+void moyenneParContinent(TousLesVoyages tVoy, float tabMoy[NB_CONT]) {
+  int ind;
+  int tabInd[NB_CONT] = {0};
+
   for (int i = 0; i < tVoy.nmbr; ++i) {
-    switch (tVoy.tab[i].cont) {
-      case 0:
-        tabInd[0] += 1;
-        tabMoy[0] += tVoy.tab[i].note;
-        break;
-      case 1:
-        tabInd[1] += 1;
-        tabMoy[1] += tVoy.tab[i].note;
-        break;
-      case 2:
-        tabInd[2] += 1;
-        tabMoy[2] += tVoy.tab[i].note;
-        break;
-      case 3:
-        tabInd[3] += 1;
-        tabMoy[3] += tVoy.tab[i].note;
-        break;
-      case 4:
-        tabInd[4] += 1;
-        tabMoy[4] += tVoy.tab[i].note;
-        break;
-      default:
-        break;
+    ind = tVoy.tab[i].cont;
+    tabMoy[ind] += tVoy.tab[i].note;
+    tabInd[ind] += 1;
+  }
+  for (int i = 0; i < NB_CONT; ++i) {
+    if (tabInd[i] == 0) {
+      tabMoy[i] = -1 ;
+    } else {
+      tabMoy[i] /= tabInd[i];
     }
   }
-  
-  for (int i = 0; i < 5; ++i)
-    tabMoy[i] /= tabInd[i];
 }
 
-void leMieuxEtLePire(TousLesVoyages tVoy, int& mieux, int& pire)
-{
-  double tabMoy[5];
+void leMieuxEtLePire(float tabMoy[NB_CONT], int& mieux, int& pire) {
   int good;
   int bad;
-  
+
   good = 0;
   bad = 20;
-  
-  moyenneParContinent(tVoy, tabMoy);
-  
-  for (int i = 0; i < 5; ++i) {
+
+  for (int i = 0; i < NB_CONT; ++i) {
     if (tabMoy[i] > good) {
       good = tabMoy[i];
       mieux = i;
@@ -106,68 +117,30 @@ void leMieuxEtLePire(TousLesVoyages tVoy, int& mieux, int& pire)
   }
 }
 
-int main()
-{
+void initTousLesVoyages(TousLesVoyages& tVoy) {
+  tVoy.nmbr = 0;
+}
+
+int main() {
   TousLesVoyages tVoy;
+  char c;
+  float tabMoy[NB_CONT];
   int mieux;
   int pire;
 
+  initTousLesVoyages(tVoy);
+
   do {
-    char c;
     ajouteVoyage(tVoy);
     std::cout << "On continue (y/n) : " << std::endl;
     std::cin >> c;
-    if (c == 'n')
-      break;
-  } while (true);
-  
-  leMieuxEtLePire(tVoy, mieux, pire);
-  
-  //FIXME: Réécrire le code
-  std::cout << "Le continent préféré est : " << std::flush;
-  switch (mieux) {
-    case 0:
-      std::cout << "Afrique" << std::endl;
-      break;
-    case 1:
-      std::cout << "Amérique" << std::endl;
-      break;
-    case 2:
-      std::cout << "Asie" << std::endl;
-      break;
-    case 3:
-      std::cout << "Europe" << std::endl;
-      break;
-    case 4:
-      std::cout << "Océanie" << std::endl;
-      break;
-      
-    default:
-      break;
-  }
-  
-  //FIXME: Réécrire le code
-  std::cout << "Le continent moins aimé : " << std::flush;
-  switch (pire) {
-    case 0:
-      std::cout << "Afrique" << std::endl;
-      break;
-    case 1:
-      std::cout << "Amérique" << std::endl;
-      break;
-    case 2:
-      std::cout << "Asie" << std::endl;
-      break;
-    case 3:
-      std::cout << "Europe" << std::endl;
-      break;
-    case 4:
-      std::cout << "Océanie" << std::endl;
-      break;
-      
-    default:
-      break;
-  }
-  
+  } while (c == 'y' && tVoy.nmbr < MAX);
+
+  moyenneParContinent(tVoy, tabMoy);
+  leMieuxEtLePire(tabMoy, mieux, pire);
+
+  std::cout << "Le continent préféré est : " << libelle[mieux] << std::endl;
+  std::cout << "Le continent moins aimé : " << libelle[pire] << std::endl;
+
   return 0;
 }
