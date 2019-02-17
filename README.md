@@ -4,15 +4,17 @@
 
 # Table of Contents
 
-- [CM](#cm)
-- [TD](#td)
-- [TP](#tp)
+- [Table of Contents](#table-of-contents)
+- [Courses](#courses)
+  - [CM](#cm)
+  - [TD](#td)
+  - [TP](#tp)
 - [Links](#links)
 - [License](#license)
 
 # Courses
 
-### CM
+## CM
 
 - [CM1 : Introduction à l'algorithmique](CM/CM1.pdf)
 - [CM2 : Bases du langage C](CM/CM2.pdf)
@@ -23,7 +25,7 @@
 - [CM7 : Les chaînes de caractères](CM/CM7.pdf)
 - [CM8 : Les Structures](CM/CM8.pdf)
 
-### TD
+## TD
 
 - [TD1 : Algorithmes simples](TD/TD1/)
   - [Sujet](TD/TD1/TD1.pdf)
@@ -80,7 +82,7 @@
   - [Corrigé](TD/TD12/TD12-cor.pdf)
   - [Source Code](TD/TD12/Code)
 
-### TP
+## TP
 
 - [TP1 : Prise en main de l’environnement / programmes simples](TP/TP1)
   - [Sujet](TP/TP1/TP1.pdf)
@@ -121,7 +123,7 @@
   - Corrigé[](TP/TP9/TP9-cor.pdf)
   - [Source Code](TP/TP9/Code) 💣
 
-## Links
+# Links
 
 - [LIFAP1][1]
 - [GrAPiC][2]
@@ -129,12 +131,12 @@
 
   > Defines some useful functions
 
-  ```cpp
+```cpp
 int fact(int n); // Factorial Function
 int combin(int n, int p); // Combination Function
-  ```
+```
 
-## License
+# License
 
 <p align="center">
   <a href="./LICENSE"><img src="https://i.nurlan.co/logo.svg" width="100%" height="128"></a>
