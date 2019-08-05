@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://i.nurlan.co/lifap1.svg" width="100%" height="300">
+  <img src="https://nurlan.co/cdn/lifap1.svg" width="100%" height="300">
 </p>
 
 # Table of Contents
@@ -139,7 +139,7 @@ int combin(int n, int p); // Combination Function
 # License
 
 <p align="center">
-  <a href="./LICENSE"><img src="https://i.nurlan.co/logo.svg" width="100%" height="128"></a>
+  <a href="./LICENSE"><img src="https://nurlan.co/cdn/logo.svg" width="100%" height="128"></a>
   <a href="./LICENSE"><strong>MIT</strong></a>
 </p>
 
